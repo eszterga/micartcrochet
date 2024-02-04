@@ -1,38 +1,38 @@
 body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-    font-family: 'Alex Brush', serif;
-    font-style: italic;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: 'Alex Brush', serif;
+  font-style: italic;
+}
 
 header nav {
-font-family: 'Georgia', serif;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 36px;
-    background-color: #f0b8e4;
-background-color: hsl(290, 100%, 90%);
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  background-color: #f0b8e4;
+  background-color: hsl(290, 100%, 90%);
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
-    margin: 0 18px;
+  margin: 0 18px;
 }
 
 nav ul li a {
-    color: #333333;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
+  color: #333333;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
 }
 
 nav ul li a:hover {
-    background-color:#EA8AD7;
-    color: #333333;
-    margin: 0 6px;
+  background-color: #EA8AD7;
+  color: #333333;
+  margin: 0 6px;
 }
