@@ -36,3 +36,7 @@ nav ul li a:hover {
   color: #333333;
   margin: 0 6px;
 }
+img {
+    width: 20px;
+    height: auto;
+}
