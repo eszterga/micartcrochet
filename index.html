@@ -37,8 +37,29 @@
     </style>
 
 </main>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GB-LlccNYyA?si=xvw-4PVMGTuHSvCV"> </iframe>
-<section>
+<style>
+    /* Style to make the video full width */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      overflow: hidden;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+  </style>
+<div class="video-container"> 
+
+<iframe src="https://www.youtube.com/embed/GB-LlccNYyA?si=xvw-4PVMGTuHSvCV?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </iframe>
+
+</div>
+    <section>
         <p>This is a basic website created using HTML and CSS - by MicartCrochet.</p>
     </section>
     <footer>
