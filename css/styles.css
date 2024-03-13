@@ -40,4 +40,12 @@ img {
     width: 20px;
     height: auto;
 }
+
+video {
+  width: 50%;
+  height: 36;
+  position: relative;
+ left: 25%;
+
+}
  
