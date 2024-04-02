@@ -58,19 +58,14 @@ padding: 0px;
   color: #333333;
 }
 
-img {
-    display: block;
-    flex:unset;
-}
  #cover > img {    
-  background-image: url('images/pexels-karina-lopez-4601228.jpg');
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
-  height: auto;
-  max-height: 700px;
-  max-width: 2200px;
+ max-height: 350px;
+  flex-wrap: wrap;
+  display: inline-block;
 }
  
   h1 {
