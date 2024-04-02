@@ -54,6 +54,9 @@ padding: 0px;
   color: #333333;
 }
 
+<!-- Applied to all pages end -->
+<!-- Applied to home page start -->
+
 img {
     display: block;
     flex:unset;
@@ -79,11 +82,16 @@ img {
    color: whitesmoke;
 }
 
+
 .intro::first-letter {font-size:35px;}
 
 .quote {
 font-style: italic;
-font-weight: bold;}
+font-weight: bold;
+}
+
+<!-- Applied to about page end -->
+<!-- Applied to contact page start -->
 
 
 .socialimage {
@@ -101,16 +109,16 @@ display: inline-block;
 
 }
 
+
 video {
   width: 50%;
   height: 36;
-  position: relative;
- left: 25%;
+  }
 
-}
  
 
 .imagegallery {
   width: 250px;
   height: 300px;
 }
+
