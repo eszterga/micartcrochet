@@ -1,0 +1,111 @@
+body 
+{
+margin:0px;
+padding:0px;
+font-family:"Playfair Display";
+background-color: #f0b8e4;
+background-color: hsl(290, 80%, 98%)
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: italic;
+
+}
+
+header > nav
+{margin:0px;
+padding:0px;
+font-family:"Playfair Display";
+font-style: italic;
+}
+
+
+header > nav {
+  font-family: "Playfair Display";
+  font-style: italic;
+font-size: 2em;
+background-color: #f0b8e4;
+padding: 0px;
+  margin: 0px;
+ height: 100%;
+}
+
+#nav ul {
+  list-style: none;
+  display: flex;  
+  justify-content: space-evenly;
+  padding: 0px;
+  margin: 0px
+}
+
+#nav ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+padding: 0px;
+  margin:0px;
+  font-size: 24px;
+}
+
+#nav ul li a:hover {
+  background-color: #EA8AD7;
+  color: #333333;
+}
+
+img {
+    display: block;
+    flex:unset;
+}
+ #cover > img {    
+  background-image: url('images/pexels-karina-lopez-4601228.jpg');
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  max-width: 2200px;
+}
+ 
+  h1 {
+
+   font-size:30px;
+   font-style: italic;
+   font-family:"Playfair Display";
+   z-index: 1;
+   position: absolute;
+   color: whitesmoke;
+}
+
+.intro::first-letter {font-size:35px;}
+
+.quote {
+font-style: italic;
+font-weight: bold;}
+
+
+.socialimage {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+display: inline-block;
+
+}
+
+.social {
+  font-family:"Playfair Display";
+  font-style:italic;
+  padding-top: 20px;
+
+}
+
+video {
+  width: 50%;
+  height: 36;
+  position: relative;
+ left: 25%;
+
+}
+ 
