@@ -3,9 +3,9 @@ body
 margin:0px;
 padding:0px;
 font-family:"Playfair Display";
-background-color: #f0b8e4;
 background: rgb(245,212,238);
 background: linear-gradient(315deg, rgba(245,212,238,1) 0%, rgba(246,227,242,1) 40%, rgba(242,250,253,1) 70%);
+background-repeat: no-repeat;
 }
 
 .playfair-display {
@@ -21,6 +21,7 @@ header > nav
 padding:0px;
 font-family:"Playfair Display";
 font-style: italic;
+
 }
 
 
@@ -55,9 +56,6 @@ padding: 0px;
   color: #333333;
 }
 
-<!-- Applied to all pages end -->
-<!-- Applied to home page start -->
-
 img {
     display: block;
     flex:unset;
@@ -91,8 +89,6 @@ font-style: italic;
 font-weight: bold;
 }
 
-<!-- Applied to about page end -->
-<!-- Applied to contact page start -->
 
 
 .socialimage {
