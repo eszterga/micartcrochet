@@ -4,7 +4,8 @@ margin:0px;
 padding:0px;
 font-family:"Playfair Display";
 background-color: #f0b8e4;
-background-color: hsl(290, 80%, 98%)
+background: rgb(245,212,238);
+background: linear-gradient(315deg, rgba(245,212,238,1) 0%, rgba(246,227,242,1) 40%, rgba(242,250,253,1) 70%);
 }
 
 .playfair-display {
