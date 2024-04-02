@@ -15,7 +15,7 @@ background-color: hsl(290, 80%, 98%)
 
 }
 
-header 
+header > nav
 {margin:0px;
 padding:0px;
 font-family:"Playfair Display";
@@ -23,7 +23,7 @@ font-style: italic;
 }
 
 
-header nav {
+header > nav {
   font-family: "Playfair Display";
   font-style: italic;
 font-size: 2em;
@@ -33,7 +33,7 @@ padding: 0px;
  height: 100%;
 }
 
-nav ul {
+#nav ul {
   list-style: none;
   display: flex;  
   justify-content: space-evenly;
@@ -41,7 +41,7 @@ nav ul {
   margin: 0px
 }
 
-nav ul li a {
+#nav ul li a {
   color: whitesmoke;
   text-decoration: none;
 padding: 0px;
@@ -49,7 +49,7 @@ padding: 0px;
   font-size: 24px;
 }
 
-nav ul li a:hover {
+#nav ul li a:hover {
   background-color: #EA8AD7;
   color: #333333;
 }
