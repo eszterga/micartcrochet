@@ -3,8 +3,8 @@
 
 body 
 {
-margin:0px;
-padding:0px;
+  margin:0px;
+  padding:0px;
 font-family:"Playfair Display";
 background: linear-gradient(315deg, rgba(245,212,238,1) 0%, rgba(246,227,242,1) 40%, rgba(242,250,253,1) 70%);
 background-size:auto;
@@ -15,6 +15,10 @@ min-height: 100vh;
 display:flex;
 flex-direction:column;
 position:relative;
+}
+
+main {
+  margin-bottom:100px;
 }
 
 .playfair-display {
@@ -72,16 +76,16 @@ border-radius:15%;
 
 #covercontainer {
   width: 100%;
-  max-height: 400px; 
- overflow: hidden; 
-  position: relative; 
-  background-size:contain;
+height: 20vw; 
+background-image: url(../images/totoro.jpg);
+opacity: 80%;
+
+background-repeat: no-repeat;
+background-size: cover;
+
 }
 
-#cover > img {
-  width: 100%;
-opacity: 80%;
-}
+
 /* ez a home pagere és annak contentjére vonatkozo szabályok */
  
   h1 {
@@ -89,8 +93,8 @@ opacity: 80%;
    font-size:30px;
    font-style: italic;
    font-family:"Playfair Display";
-   z-index: 1;
-   position: absolute;
+    margin: 0;
+ 
    color: whitesmoke;
 }
 
@@ -209,12 +213,12 @@ overflow:visible;
 
 footer {
 background-color:#dfb6d7;
-max-height:10vh;
+height:50px;
 flex-grow:1;
 display:flex;
 justify-content:flex-end;
-position:absolute;
-bottom:0;
+position: absolute;
+bottom:0px;
 width:100%
 
 
