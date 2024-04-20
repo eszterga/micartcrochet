@@ -1,5 +1,5 @@
 
-/* ez lesz az álatlános, mindenre vonatkozok */
+/* ez lesz az általános, mindenre vonatkozok */
 
 body 
 {
@@ -40,6 +40,10 @@ height: 45px;
 width:100%;
 }
 
+@media screen and (max-width = 600px) {
+nav { height: 32px;}
+}
+
 nav > div {
   width:20%;
   display:flex;
@@ -47,6 +51,8 @@ nav > div {
   align-items:center;
 
 }
+
+
 
 .menu { 
 font-family:"Playfair Display";
@@ -64,6 +70,22 @@ text-align: center;
 
 }
 
+@media screen and (max-width : 600px) {
+  .menu { 
+    font-family:"Playfair Display";
+    font-style: italic;
+    color: whitesmoke;
+    display:flex;
+    align-items:center;
+    text-decoration: none;
+    padding: 5px;
+    margin:5px;
+    font-size: 20px;
+    transition: 0.7s;
+    text-align: center;
+}
+}
+
 .menu:hover {
 background-color: #ea8ad7;
 color: #333333;
@@ -72,6 +94,13 @@ border-color: #ea8ad7;
 border-radius:15%;
 
 
+}
+
+@media screen and (max-width : 600px) {
+  .menu:hover {
+    font-size: 23px;
+  }
+  
 }
 
 #covercontainer {
