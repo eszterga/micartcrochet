@@ -31,6 +31,9 @@ main {
 
 }
 
+h2 {font-style:italic;
+}
+
 /* ez a menure, navigaciora vonatkozo szabályok */
 nav
 {
@@ -42,7 +45,7 @@ height: 45px;
 width:100%;
 }
 
-@media screen and (max-width = 600px) {
+@media screen and (max-width : 600px) {
 nav { height: 32px;}
 }
 
@@ -80,7 +83,7 @@ text-align: center;
     text-decoration: none;
     padding: 5px;
     margin:5px;
-    font-size: 20px;
+    font-size: 22px;
     transition: 0.7s;
     text-align: center;
 }
@@ -98,7 +101,7 @@ border-radius:15%;
 
 @media screen and (max-width : 600px) {
   .menu:hover {
-    font-size: 23px;
+    font-size: 25px;
   }
   
 }
@@ -129,6 +132,10 @@ background-size: cover;
 
 /* ez lesz az About pagere vonatkozok */
 .intro::first-letter {font-size:40px;}
+
+@media screen and (max-width : 600px) {
+.intro::first-letter {font-size:30px;}
+}
 
 .wholeabout {text-align:justify;}
 
@@ -225,11 +232,21 @@ overflow:visible;
   
 
 /* ez a More pagere vonatkozo szabályok */
-#video 
-{display: block;
-  flex-direction: column;
+.video {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 50vh; 
+  margin:0px;
+  padding:0px;
 }
+
+iframe {display:inline-flex;
+justify-content:center;
+
+
+}
+
 
  /* ez a Gallery vonatkozo szabályok */
 
