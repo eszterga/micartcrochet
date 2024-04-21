@@ -223,13 +223,15 @@ h1 {
   }
 }
 
-/* ez a More pagere vonatkozo szabályok */
+/* ez a More, video pagere vonatkozo szabályok */
 .videoid {
   height: 40vh;
   display: flex;
   justify-content: space-around;
+  gap:10px;
   
 }
+
 
 .video {
   justify-content:space-between
