@@ -227,21 +227,20 @@ h1 {
 .videoid {
   height: 40vh;
   display: flex;
-  justify-content: space-around;
+  flex-direction:row;
+  justify-content:space-between;
   gap:10px;
+  overflow:hidden;
   
 }
 
-
-.video {
-  justify-content:space-between
-}
 
 @media screen and (max-width: 600px) {
   .videoid {
     display: flex;
     flex-direction:column;
     gap:10px;
+    overflow:hidden;
 
     
   }
