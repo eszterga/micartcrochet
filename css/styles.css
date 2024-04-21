@@ -224,17 +224,33 @@ h1 {
 }
 
 /* ez a More pagere vonatkozo szabályok */
-#videoid {
+.videoid {
   height: 40vh;
   display: flex;
   justify-content: space-around;
   
 }
 
+.video {
+  justify-content:space-between
+}
+
 @media screen and (max-width: 600px) {
-  #videoid {
-    display: inline;
+  .videoid {
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+
+    
   }
+.video {
+overflow: hidden;
+height: 600px;
+width: 400px;
+align-self:center;
+}
+
+
 }
 
 /* ez a Gallery vonatkozo szabályok */
