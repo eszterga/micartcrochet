@@ -21,6 +21,13 @@ body {
   font-size: 18px;
 }
 
+@media screen and (max-width : 500px) {
+ body {font-size:16px;}
+
+
+
+}
+
 main {
   margin-bottom: 100px;
 }
@@ -41,6 +48,20 @@ main {
 h2 {
   font-style: italic;
 }
+
+@media screen and (max-width : 500px) {
+
+  h2 {
+    font-style: italic;
+    font-size:23px;
+  }
+
+
+}
+
+@media screen and (max-width : 500px) {
+h3 {font-size: 18px;
+}}
 
 /* ez a menure, navigaciora vonatkozo szabályok */
 nav {
@@ -88,7 +109,7 @@ nav > div {
     text-decoration: none;
     padding: 5px;
     margin: 5px;
-    font-size: 22px;
+    font-size: 21px;
     transition: 0.7s;
     text-align: center;
   }
@@ -104,7 +125,7 @@ nav > div {
 
 @media screen and (max-width: 600px) {
   .menu:hover {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 
@@ -127,6 +148,20 @@ h1 {
   margin: 0;
 
   color: whitesmoke;
+}
+
+@media screen and (max-width : 500px) {
+
+  h1 {
+    font-size: 22px;
+    font-style: italic;
+    font-family: "Playfair Display";
+    margin: 0;
+  
+    color: whitesmoke;
+  }
+
+
 }
 
 /* ez lesz az About pagere vonatkozok */
