@@ -241,19 +241,12 @@ h1 {
 
 @media screen and (max-width: 600px) {
   .video-container {
-    display: flex;
-    flex-direction:column;
-overflow:hidden;
-
-}
-.video-container iframe {
-overflow: hidden;
-height: 600px;
-width: 400px;
-
-}
-
-
+    width: 100%; /* Each video takes up full width on mobile */
+    height: auto; /* Allow height to adjust based on aspect ratio */
+    margin-bottom: 20px; /* Add spacing between videos */
+    padding: 0; /* Remove padding on mobile */
+    float: none; /* Remove floating on mobile */
+  }
 }
 
 
@@ -301,7 +294,7 @@ footer {
 @media screen and (max-width: 820px) {
   footer {
     background-color: #dfb6d7;
-    height: 80px;
+    height: 90px;
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -311,12 +304,11 @@ footer {
     text-wrap:wrap;
   }
   
-
-  
-  .footer {
+.footer {
    flex-wrap: wrap;
     justify-content: flex-end;
     border-top: 2px solid grey;
+    align-items: flex-start;
     
   }
 }
