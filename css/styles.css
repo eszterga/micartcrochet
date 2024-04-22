@@ -81,9 +81,20 @@ justify-content: space-evenly;
 nav > div {
   width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
+
+@media screen and (max-width : 400px) {
+
+  nav > div {
+    width: 18%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
 
 .menu {
   font-family: "Playfair Display";
@@ -92,6 +103,7 @@ nav > div {
   display: flex;
   align-items: center;
   text-decoration: none;
+  justify-content: space-evenly;
   padding: 5px;
   margin: 5px;
   font-size: 26px;
@@ -106,6 +118,7 @@ nav > div {
     color: whitesmoke;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     text-decoration: none;
     padding: 5px;
     margin: 5px;
@@ -114,6 +127,25 @@ nav > div {
     text-align: center;
   }
 }
+
+
+@media screen and (max-width: 400px) {
+  .menu {
+    font-family: "Playfair Display";
+    font-style: italic;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px;
+    transition: 0.7s;
+    text-align: center;
+  }
+}
+
 
 .menu:hover {
   background-color: #ea8ad7;
@@ -126,6 +158,12 @@ nav > div {
 @media screen and (max-width: 600px) {
   .menu:hover {
     font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu:hover {
+    font-size: 20px;
   }
 }
 
@@ -265,6 +303,7 @@ h1 {
   height: 40vh;
   overflow: hidden;
   float: left; 
+  
 
 }
 
@@ -277,9 +316,24 @@ h1 {
 @media screen and (max-width: 600px) {
   .video-container {
     width: 100%; /* Each video takes up full width on mobile */
-    height: auto; /* Allow height to adjust based on aspect ratio */
-    margin-bottom: 20px; /* Add spacing between videos */
+    height: auto;
+    display:flex;
+    align-items:center; /* Allow height to adjust based on aspect ratio */
+    margin-bottom: 20px;
+   
     padding: 0; /* Remove padding on mobile */
+    float: none; /* Remove floating on mobile */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .video-container {
+    width: 100%; /* Each video takes up full width on mobile */
+    height: auto; /* Allow height to adjust based on aspect ratio */
+    margin-bottom: 20px;
+    display:flex;
+    align-items:center;
+   padding: 0; /* Remove padding on mobile */
     float: none; /* Remove floating on mobile */
   }
 }
