@@ -43,9 +43,19 @@ main {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 600px) {
   main {
     margin-bottom: 50px;
+    margin-left: 3%;
+  margin-right: 3%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  main {
+    margin-bottom: 50px;
+    margin-left: 10%;
+  margin-right: 10%;
   }
 }
 
