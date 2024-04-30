@@ -4,6 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Playfair Display";
+  letter-spacing: 1px;
   background: white;
   background-size: auto;
   max-width: 100%;
@@ -14,6 +15,7 @@ body {
   flex-direction: column;
   position: relative;
   font-size: 18px;
+  line-height:1.5em;
   
 }
 
@@ -36,11 +38,11 @@ body {
 }
 
 main {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 22%;
+  margin-right: 22%;
   background-color:	rgb 245, 245, 245 ;
-flex-grow: 1;
-  margin-bottom: 50px;
+margin-bottom: 50px;
+  
 }
 
 @media screen and (min-width: 300px) and (max-width: 600px) {
@@ -62,6 +64,7 @@ flex-grow: 1;
 .content {
   padding: 20px;
   margin-bottom:100px;
+ 
 }
 
 
@@ -100,11 +103,15 @@ nav {
   display: flex;
   justify-content: space-evenly;
   background: linear-gradient(
-    315deg,
-    rgb(38, 80, 115) 0%,
-    rgb(45, 149, 150) 40%,
-    rgb(154, 208, 194) 90%
-  );
+
+  315deg,
+  rgb(33, 71, 102) 0%,       
+  rgba(38, 80, 115) 20%,    
+  rgb(45, 149, 150) 40%,     
+  rgb(154, 208, 194) 90%      
+
+
+ );
   height: 45px;
   width: 100%;
   border-bottom: 2px solid #333333;
@@ -129,17 +136,6 @@ nav {
   justify-content: space-evenly;
   width: 60%;
 }
-@media screen and (min-width: 300px) and (max-width: 600px) {
-  .navdiv > div {
-    width: 18%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex:1;
-  }
-}
-
-
 @media screen and (max-widht: 800px) {
   .navdiv {
     display: flex;
@@ -160,18 +156,21 @@ nav {
 }
 
 
+
 .menu {
   font-family: "Playfair Display";
   font-style: italic;
   color: whitesmoke;
-  display: flex;
-  align-items: center;
+flex:1;
+display:flex;
+
+ align-items: center;
   text-decoration: none;
   justify-content: space-evenly;
   padding: 5px;
   margin: 5px;
   font-size: 26px;
-  transition: 0.7s;
+  transition: 0.6s;
   text-align: center;
 }
 
@@ -181,13 +180,14 @@ nav {
     font-style: italic;
     color: whitesmoke;
     display: flex;
+    flex:1;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
     padding: 5px;
     margin: 5px;
     font-size: 21px;
-    transition: 0.7s;
+    transition: 0.6s;
     text-align: center;
   }
 }
@@ -198,13 +198,14 @@ nav {
     font-style: italic;
     color: whitesmoke;
     display: flex;
+    flex:1;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
     padding: 5px;
     margin: 5px;
     font-size: 18px;
-    transition: 0.7s;
+    transition: 0.6s;
     text-align: center;
   }
 }
@@ -214,13 +215,14 @@ nav {
     font-style: italic;
     color: whitesmoke;
     display: flex;
+    flex:1;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
     padding: 5px;
     margin: 5px;
-    font-size: 16px;
-    transition: 0.7s;
+    font-size: 15px;
+    transition: 0.6s;
     text-align: center;
   }
 }
@@ -229,7 +231,8 @@ nav {
   background-color: #8fc8d4;
   color: #333333;
   font-size: 30px;
-  border-radius: 15%;
+  border-radius: 25%;
+ 
 }
 
 @media screen and (max-width: 600px) {
@@ -310,11 +313,13 @@ h1 {
   }
 }
 
+/* accordion az about page-en */
+
+
 /* ez a contact pagere vonatkozo szabályok */
 .socialimage {
   width: 40px;
-  height: 30px;
-  margin-right: 10px;
+margin-right: 10px;
   display: inline-block;
 }
 
@@ -322,6 +327,20 @@ h1 {
   font-family: "Playfair Display";
   font-style: italic;
   padding-top: 20px;
+}
+
+
+@media screen and (min-width:200px) and (max-width:600px){
+
+.social > .socialimage
+{
+  width: 28px;
+margin-right: 10px;
+  display:inline-block;
+
+}
+
+
 }
 
 .paw {
@@ -377,6 +396,7 @@ h1 {
   height: 40vh;
   overflow: hidden;
   float: left;
+  margin-bottom: 20px;
 }
 
 .video-container iframe {
@@ -384,6 +404,15 @@ h1 {
   height: 100%;
   margin: 10px;
 }
+
+
+.videoszoveg {
+
+float:left;
+
+}
+
+
 
 @media screen and (max-width: 1200px) {
   .video-container {
@@ -440,11 +469,11 @@ h1 {
 
 footer {
 background: linear-gradient(
-    315deg,
-    rgb(38, 80, 115) 0%,
-    rgb(45, 149, 150) 40%,
-    rgb(154, 208, 194) 90%
-    
+  315deg,
+  rgb(33, 71, 102) 0%,       
+  rgba(38, 80, 115) 20%,     
+  rgb(45, 149, 150) 40%,     
+  rgb(154, 208, 194) 90% 
   );
   height: 50px;
   flex-grow: 1;
