@@ -1,3 +1,37 @@
+/* ez a cookie warning */
+
+#cookiewarning {
+  position: fixed;
+  bottom:0;
+  display: flex;
+  width: 100vw;
+  height: 70px;
+  align-items: center;
+  left:0;
+  font-size: 16px;
+  z-index: 1;
+  background-color:rgb(45, 149, 150, 0.8);
+  flex-grow:1;
+  font-weight: bold;
+  animation-duration: 2s;
+  animation-name: cookieup;
+  animation-timing-function: ease;
+
+}
+
+#cookiewarning button {margin-left:20px;
+}
+
+@keyframes cookieup {
+  from {
+    bottom: - 50px;
+  }
+  to {bottom:0;
+  }
+}
+
+
+
 /* ez lesz az általános, mindenre vonatkozok */
 
 body {
