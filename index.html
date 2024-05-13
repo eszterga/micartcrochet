@@ -50,8 +50,8 @@
         </div>
       </div>
       <section id="cookiewarning">
-        <div>About cookies on this site. Our websites require some cookies to function properly (required). 
-          In addition, other cookies may be used with your consent to analyze site usage, improve the user experience.
+        <div>About cookies on this site. My website requires some cookies to function properly (required). 
+          In addition, other cookies may be used with your consent to analyze site usage and improve the user experience.
         
           <button>Agree</button>
         
@@ -60,19 +60,17 @@
         </section>
 
     <script> 
-    document.querySelector("#cookiewarning").classList.add('show');
+  document.querySelector("#cookiewarning").classList.add('show');
   document.addEventListener('DOMContentLoaded', function() {
   let button = document.querySelector("#cookiewarning button");
   let section = document.querySelector("#cookiewarning");
 
-  // Check if the user has already agreed to the cookie policy
   if (localStorage.getItem('cookieAccepted')) {
-    section.style.display = "none"; // Hide the cookie warning if the flag exists
+    section.style.display = "none"; 
   }
 
   button.addEventListener("click", function() {
     section.style.display = "none";
-    // Set a flag in localStorage indicating that the user has accepted the cookie policy
     localStorage.setItem('cookieAccepted', true);
   });
 });
