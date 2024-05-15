@@ -492,7 +492,7 @@ float:left;
 /* ez a Gallery vonatkozo szabályok */
 
 .container {
-width: 1600px;
+width: 2400px;
 margin:auto;
 
 }
@@ -553,7 +553,7 @@ margin:auto;
 }
 
 
-@media (max-width:1600px) {
+@media (max-width:2400px) {
   .container {
     width: 100%;
   }
