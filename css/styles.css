@@ -491,16 +491,72 @@ float:left;
 
 /* ez a Gallery vonatkozo szabályok */
 
-#imagegallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.container {
+width: 1600px;
+margin:auto;
+
 }
-.imagegallery {
-  width: 300px;
-  height: 300px;
+
+.subcontainer {
+  width:90%;
+  margin:auto;
+}
 
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;gap: 1rem;
+  padding: 20px;
+  overflow-x: hidden; }
+
+  .img {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover; }
+/* ezek a Gallery képek vonatkozo szabályok */
+
+.img:nth-child(1) {
+  background-image: url(/images/baby2.jpg);
+  
+}
+
+.img:nth-child(2) {
+  background-image: url(/images/baby3.jpg);
+ 
+}
+
+.img:nth-child(3) {
+  background-image: url(/images/baby4.jpg);
+ 
+}
+
+.img:nth-child(4) {
+  background-image: url(/images/donkey.jpg);
+}
+
+.img:nth-child(5) {
+  background-image: url(/images/noface.jpg);
+ 
+}
+
+.img:nth-child(6) {
+  background-image: url(/images/fox.jpg);
+}
+
+.img:nth-child(7) {
+  background-image: url(/images/poncho.jpg);
+}
+
+.img:nth-child(8) {
+  background-image: url(/images/kardi.jpg);
+}
+
+
+@media (max-width:1600px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* ez a footerre vonatkozo szabályok */
