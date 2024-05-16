@@ -17,7 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+
   </head>
   <body class="bodyhome">
     
@@ -35,9 +36,31 @@
             </header>
 
     <main>
-      <div id="covercontainer">
+    <!--  <div id="covercontainer">
         <h1>Welcome to MicartCrochet</h1>
-      </div>
+      </div> -->
+ <!-- Slideshow container -->
+ <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="slides fade">
+    
+    <img src="images/cover.jpg" style="width:100%" class="imgcover">
+  </div>
+
+  <div class="slides fade">
+  <img src="images/cover2.jpg" style="width:100%" class="imgcover">
+   </div>
+
+  <div class="slides fade">
+  <img src="images/cover3.jpg" style="width:100%" class="imgcover">
+  </div> 
+
+  <div class="slides fade">
+    <img src="images/cover4.jpg" style="width:100%" class="imgcover">
+    </div> 
+  </div>
+
 
       <div class="content">
         <h2>Hello there, nice to have you here!</h2>
@@ -75,6 +98,23 @@
     localStorage.setItem('cookieAccepted', true);
   });
 });
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+} 
+
+
   </script>
    
     </main>
