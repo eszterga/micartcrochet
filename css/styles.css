@@ -86,8 +86,8 @@ margin-bottom: 50px;
 @media screen and (min-width: 300px) and (max-width: 600px) {
   main {
     margin-bottom: 50px;
-    margin-left: 3%;
-  margin-right: 3%;
+    margin-left: 4%;
+  margin-right: 4%;
   }
 }
 
@@ -167,6 +167,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin:auto;
 }
 
 .navdiv {
@@ -285,7 +286,7 @@ display:flex;
   }
 }
 
-#covercontainer {
+/* #covercontainer {
   width: 100%;
   height: 20vw;
   background-image: url(../images/totoro.jpg);
@@ -293,7 +294,7 @@ display:flex;
 
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 /* ez a home pagere és annak contentjére vonatkozo szabályok */
 
@@ -492,7 +493,7 @@ float:left;
 /* ez a Gallery vonatkozo szabályok */
 
 .container {
-width: 2400px;
+/*width: 2400px;*/
 margin:auto;
 
 }
@@ -631,3 +632,77 @@ bottom: 0px;
     }
 
   }
+/* carousel-re vonatkozó szabályok */
+
+
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  margin:auto;
+  position: relative;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  width: 1100px;
+  height: 500px;
+
+  
+}
+
+@media screen and (min-width: 620px) and (max-width: 820px) {
+
+
+.slideshow-container {
+  margin:auto;
+  position: relative;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  width: 600px;
+  height: 250px;
+
+  
+} }
+
+@media screen and (min-width: 300px) and (max-width: 620px) {
+
+
+  .slideshow-container {
+    margin:auto;
+    position: relative;
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    width: 450px;
+    height: 225px;
+  
+    
+  } }
+
+
+
+
+
+.imgcover {
+  opacity:50%
+  
+}
+
+/* Hide the images by default */
+.slides {
+  display: none;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
