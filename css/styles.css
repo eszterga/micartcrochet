@@ -57,7 +57,7 @@ body {
   
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   body {
     margin: 0px;
   padding: 0px;
@@ -72,8 +72,30 @@ body {
   flex-direction: column;
   position: relative;
  font-size: 16px;
+ line-height:1.5em;
   }
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    margin: 0px;
+  padding: 0px;
+  font-family: "Playfair Display";
+  background: white;
+  background-size: auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ font-size: 17px;
+ line-height:1.5em;
+  }
+}
+
+
 
 main {
   margin-left: 22%;
@@ -83,21 +105,32 @@ margin-bottom: 50px;
   
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   main {
+    
     margin-bottom: 50px;
     margin-left: 4%;
   margin-right: 4%;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  main {
+    margin-bottom: 50px;
+    margin-left: 7%;
+  margin-right: 7%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
   main {
     margin-bottom: 50px;
     margin-left: 10%;
   margin-right: 10%;
   }
 }
+
 
 .content {
   padding: 20px;
@@ -139,6 +172,7 @@ h2 {
 /* ez a menure, navigaciora vonatkozo szabályok */
 nav {
   display: flex;
+  flex:1;
   justify-content: space-evenly;
   background: linear-gradient(
 
@@ -156,45 +190,65 @@ nav {
   
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   nav {
     height: 32px;
+  
+      
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  nav {
+    height: 32px;
+
+    
   }
 }
 
 .navdiv > div {
-  width: 20%;
+  width: 10%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin:auto;
+  flex:1;
 }
+
 
 .navdiv {
   display: flex;
   justify-content: space-evenly;
   width: 60%;
+  flex:1;
 }
-@media screen and (max-widht: 800px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 60%;
-    
-  }
-}
-
-
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .navdiv {
     display: flex;
     justify-content: space-evenly;
     width: 50%;
+    
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .navdiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
     flex:1;
   }
 }
 
 
+@media screen and (min-width: 200px) and (max-width: 480px) {
+  .navdiv {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    flex:1;
+  }
+}
 
 .menu {
   font-family: "Playfair Display";
@@ -211,9 +265,10 @@ display:flex;
   font-size: 26px;
   transition: 0.6s;
   text-align: center;
+
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .menu {
     font-family: "Playfair Display";
     font-style: italic;
@@ -231,7 +286,7 @@ display:flex;
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .menu {
     font-family: "Playfair Display";
     font-style: italic;
@@ -248,7 +303,7 @@ display:flex;
     text-align: center;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   .menu {
     font-family: "Playfair Display";
     font-style: italic;
@@ -258,9 +313,9 @@ display:flex;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    padding: 5px;
-    margin: 5px;
-    font-size: 15px;
+    padding: 2px;
+    margin: 2px;
+    font-size: 14px;
     transition: 0.6s;
     text-align: center;
   }
@@ -274,15 +329,23 @@ display:flex;
  
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
   .menu:hover {
-    font-size: 24px;
+
+    font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .menu:hover {
+    font-size: 22px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
   .menu:hover {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -644,8 +707,8 @@ bottom: 0px;
   overflow: hidden;
   display:flex;
   justify-content:center;
-  width: 1100px;
-  height: 500px;
+  max-width: 100%;
+  height: auto;
 
   
 }
@@ -658,6 +721,7 @@ bottom: 0px;
   position: relative;
   overflow: hidden;
   display:flex;
+  flex:1;
   justify-content:center;
   width: 600px;
   height: 250px;
@@ -665,7 +729,7 @@ bottom: 0px;
   
 } }
 
-@media screen and (min-width: 300px) and (max-width: 620px) {
+@media screen and (min-width: 200px) and (max-width: 480px) {
 
 
   .slideshow-container {
@@ -673,25 +737,64 @@ bottom: 0px;
     position: relative;
     overflow: hidden;
     display:flex;
+    flex:1;
     justify-content:center;
-    width: 450px;
-    height: 225px;
+    width: 300px;
+    height: 200px;
+
+ 
   
     
   } }
 
+  @media screen and (min-width: 481px) and (max-width: 768px) {
 
 
+    .slideshow-container {
+      margin:auto;
+      position: relative;
+      overflow: hidden;
+      display:flex;
+      flex:1;
+      justify-content:center;
+      width: 500px;
+      height: 300px;
+    
+      
+    } }
 
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+
+
+      .slideshow-container {
+        margin:auto;
+        position: relative;
+        overflow: hidden;
+        display:flex;
+        flex:1;
+        justify-content:center;
+        width: 700px;
+        height: 400px;
+      
+        
+      } }
 
 .imgcover {
-  opacity:50%
+  opacity:60%;
+
   
 }
 
 /* Hide the images by default */
 .slides {
   display: none;
+  margin-bottom: 5px;
+}
+
+.slides img {
+  width: 100%;
+  display: block; 
+/* Ensures images are responsive */
 }
 
 
@@ -699,6 +802,7 @@ bottom: 0px;
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+
 }
 
 @keyframes fade {
