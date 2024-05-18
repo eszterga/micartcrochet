@@ -207,7 +207,7 @@ nav {
 }
 
 .navdiv > div {
-  width: 10%;
+  width: 20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -219,35 +219,8 @@ nav {
 .navdiv {
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  max-width: 1200px;
   flex:1;
-}
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-    
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-    flex:1;
-  }
-}
-
-
-@media screen and (min-width: 200px) and (max-width: 480px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 20%;
-    flex:1;
-  }
 }
 
 .menu {
@@ -260,8 +233,6 @@ display:flex;
  align-items: center;
   text-decoration: none;
   justify-content: space-evenly;
-  padding: 5px;
-  margin: 5px;
   font-size: 26px;
   transition: 0.6s;
   text-align: center;
@@ -278,8 +249,6 @@ display:flex;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    padding: 5px;
-    margin: 5px;
     font-size: 21px;
     transition: 0.6s;
     text-align: center;
@@ -296,8 +265,6 @@ display:flex;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    padding: 5px;
-    margin: 5px;
     font-size: 18px;
     transition: 0.6s;
     text-align: center;
@@ -313,8 +280,6 @@ display:flex;
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    padding: 2px;
-    margin: 2px;
     font-size: 14px;
     transition: 0.6s;
     text-align: center;
@@ -325,8 +290,7 @@ display:flex;
   background-color: #8fc8d4;
   color: #333333;
   font-size: 30px;
-  border-radius: 25%;
- 
+
 }
 
 
