@@ -391,6 +391,52 @@ h1 {
 
 /* accordion az about page-en */
 
+.accordion {
+  background-color: rgba(45, 149, 150, 0.8);
+  color: black;
+  font-weight:bold;
+  font-size:20px;
+  font-family: "Playfair Display";
+cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+@media screen and (max-width:600px) {
+  .accordion {font-size: 15px;
+}  }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0; /* Hide the panel by default */
+  transition: max-height 0.2s ease-out; /* Add smooth transition for animation */
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
 /* ez a contact pagere vonatkozo szabályok */
 .socialimage {
   width: 40px;
