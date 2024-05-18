@@ -26,29 +26,33 @@
         </header>
     
     <main>
-    
-    <section class="wholeabout">
-        <div class="content"> 
+<section class="wholeabout">
+<div class="content"> 
          
 <article class="whatismicart">
                  
 <h2> What is MicArt? </h2> 
 
-<article class="about">
-    <p>
+<article class="about" >
+    <p class="intro">
      Let me introduce myself and one of my passions: crochet.
-      Which is not knitting &#128516;. Worry not, most of the people
+      Which is not knitting. Worry not, most of the people
       confuse them but I'm here to explain to you and introduce you to
-      this wonderful art - which is no, not made only by grandmothers. <img src="images/freddie.jpg" class="freddie"> 
-    </p>
+      this wonderful art - which is no, not made only by grandmothers. <img src="images/freddie.jpg" class="freddie"></p> 
+      <p>Long story short: if you know
+      what is the difference between snowboarding and skiing then here you are! You know the basic difference.
+      Beside that different "tools" are used, different technique is needed.  
+    </p> 
     <p>Enjoy the journey, let's start!</p>
   </article>
                 
 <p class="intro"> The history of MicArt goes back until 2010 when I've finished nail art school. As of my nickname - got from my dad, when I was 2 years old - 
-                 is Mica since decades, when I finished nail art school I "had to come up" with a name, which represents me and the creative side of mine.  <br>
+is Mica since decades, when I finished nail art school I "had to come up" with a name, which represents me and the creative side of mine.  <br>
     </p>
-    
-         
+  
+    <button class="accordion">More about MicArt's history </button>
+    <div class="panel">
+      
 <p class="intro"> In 2017, after a tragic family event I felt: I need something to keep my mind and heart in peace. To express my feelings, shift my focus on something, which brings joy, keeps my ruminating brain busy and actually
              englightens my days, weeks. Context: my late grandmother's hands (from father end) were magical. She cooked and baked like and angel, there was no material, which she could not turn into
              something beautiful, useful, funny or simply decorative. Beside sewing, knitting and embroidered, she crocheted. <br>
@@ -59,8 +63,10 @@
 more like a lifestyle, a way of life - which of course escalated into learning punchneedling and yes: I've just recently bought my first sewing maschine. </p>
          
 </article>
+<br>
 
-<h2>What is it good for? </h2>
+<button class="accordion">What is it good for? </button>
+<div class="panel">
 
 <p class="intro">
     You might laugh about the title of an article, which starts with: Happy Hookers - but hear me out! First and foremost: personally
@@ -75,11 +81,12 @@ more like a lifestyle, a way of life - which of course escalated into learning p
     <p class="intro">Beside the mental wellbeing, you can give handmade, unique gifts to your loved ones, which they can wear,
         bring with themselfs, use as a decoration or even in their everyday life. Yes, I am aware that this is a super "slow fashion"
     direction, which requires time and patience and nowadays most of the people do not (want?) to have these. But I still belive, time is 
-the most precious gift, you can give to someone/anyone. </p>
+the most precious gift, you can give to someone/anyone. </p> </div>
 
 
-<article class="history">
-    <h2>History of crochet</h2> 
+<br>
+ <button class="accordion">History of crochet</button>
+<div class="panel">
     <p class="intro"> The word crochet originates from the French word croche, or hook, but the technique predates the French. 
         Crocheting is defined as: <br> </p>
 <div class="quote">
@@ -93,13 +100,11 @@ the most precious gift, you can give to someone/anyone. </p>
         performed by them as well for centuries. </p>
         <p style="font-weight: bold; font-style:italic;"> So huge shout out for the (nowadays performing) male artists, keep going despite the social prerequisites! </p>
 
-        </div>
+        </div> 
+      </div>
 </article>
     
 </main>
-
-    
-
 
 <footer>
     <section class="footer">
@@ -109,5 +114,25 @@ the most precious gift, you can give to someone/anyone. </p>
       </p>
     </section>
   </footer>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+  </script>
 </body>
 </html>
