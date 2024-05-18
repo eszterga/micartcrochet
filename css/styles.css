@@ -1,3 +1,26 @@
+/* ez a homepage background */
+.bodybg {
+  /* The image used */
+  background-image: url("../images/pexels-punchbrandstock-5714855.jpg");
+height: 100%; 
+background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1; /* Ensure the content is above the overlay */
+}
+
+.bodybg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust the opacity and color */
+  z-index: -1; /* Place the overlay below the content */
+}
+
 /* ez a cookie warning */
 
 #cookiewarning {
@@ -42,16 +65,17 @@ body {
   font-family: "Playfair Display";
   letter-spacing: 1px;
   background: white;
-  background-size: auto;
+ /* background-size: auto;*/
   max-width: 100%;
   max-height: 100%;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   font-size: 18px;
   line-height: 1.5em;
+;
 }
 
 @media screen and (min-width: 200px) and (max-width: 480px) {
@@ -918,7 +942,7 @@ footer {
 }
 
 .imgcover {
-  opacity: 60%;
+  opacity: 85%;
 }
 
 Hide the images by default
