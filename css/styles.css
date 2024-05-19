@@ -212,7 +212,8 @@ nav {
 }
 
 .navdiv > div {
-  width: 10%;
+  /*width: 10%; */
+  width:20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -223,10 +224,11 @@ nav {
 .navdiv {
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  /*width: 60%; */
+  max-width:1200px;
   flex: 1;
 }
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+/* @media screen and (min-width: 769px) and (max-width: 1200px) {
   .navdiv {
     display: flex;
     justify-content: space-evenly;
@@ -250,7 +252,7 @@ nav {
     width: 20%;
     flex: 1;
   }
-}
+} */
 
 .menu {
   font-family: "Playfair Display";
@@ -262,8 +264,8 @@ nav {
   align-items: center;
   text-decoration: none;
   justify-content: space-evenly;
-  padding: 5px;
-  margin: 5px;
+  /*padding: 5px;
+  margin: 5px;*/
   font-size: 26px;
   transition: 0.6s;
   text-align: center;
@@ -314,8 +316,8 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    padding: 2px;
-    margin: 2px;
+    /*padding: 2px;
+    margin: 2px; */
     font-size: 14px;
     transition: 0.6s;
     text-align: center;
@@ -326,7 +328,7 @@ nav {
   background-color: #8fc8d4;
   color: #333333;
   font-size: 30px;
-  border-radius: 25%;
+  border-radius: 100%; 
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
@@ -582,6 +584,10 @@ cursor: pointer;
     align-items: center;
     padding: 0;
     float: none;
+  }
+  div.content {
+    margin: 20px;
+
   }
 }
 
