@@ -24,6 +24,21 @@
     <a href="contact.html" class="menu">Contact</a></div>
       
 </nav>
+
+<!-- hamburger menu-->    
+<div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)";>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799</a>
+
+  <a href="index.html" class="menu">Home</a>
+  <a href="about.html" class="menu">About</a>
+  <a href="gallery.html" class="menu">Gallery</a>
+  <a href="video.html" class="menu">Video</a>
+  <a href="contact.html" class="menu">Contact</a>
+</div>
+
+<div id="main"style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+  <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()">&#9776;Menu</span>
+</div>
     </header>
     <main>
 
@@ -156,6 +171,16 @@
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3500); // Change image every 2 seconds
     }
+  </script>
+  <!--hamburger JS mobile nézethez-->
+  <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.maxHeight = "0";
+  }
   </script>
 
   </body>

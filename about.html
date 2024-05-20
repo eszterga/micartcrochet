@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="MicartCrochet, yarn turn into something beautiful"/>
-    <title>About &#x1F4AC </title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="script.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="MicartCrochet, yarn turn into something beautiful"/>
+<title>About &#x1F4AC </title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
@@ -23,6 +21,20 @@
         <a href="contact.html" class="menu">Contact</a></div>
           
   </nav>
+ <!-- hamburger menu-->    
+<div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)";>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799</a>
+
+  <a href="index.html" class="menu">Home</a>
+  <a href="about.html" class="menu">About</a>
+  <a href="gallery.html" class="menu">Gallery</a>
+  <a href="video.html" class="menu">Video</a>
+  <a href="contact.html" class="menu">Contact</a>
+</div>
+
+<div id="main"style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+  <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()">&#9776;Menu</span>
+</div>
         </header>
     
     <main>
@@ -103,6 +115,16 @@ the most precious gift, you can give to someone/anyone. </p> </div>
         </div> 
       </div>
 </article>
+ <!--hamburger JS mobile nézethez-->
+ <script>
+  function openNav() {
+  document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.maxHeight = "0";
+}
+</script>
     
 </main>
 

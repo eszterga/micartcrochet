@@ -29,6 +29,20 @@
           <a href="contact.html" class="menu">Contact</a>
         </div>
       </nav>
+      <!-- hamburger menu-->    
+<div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)";>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799</a>
+
+  <a href="index.html" class="menu">Home</a>
+  <a href="about.html" class="menu">About</a>
+  <a href="gallery.html" class="menu">Gallery</a>
+  <a href="video.html" class="menu">Video</a>
+  <a href="contact.html" class="menu">Contact</a>
+</div>
+
+<div id="main"style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+  <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()">&#9776;Menu</span>
+</div>
     </header>
 
     <main>
@@ -36,9 +50,9 @@
         <div class="content">
           <article>
             <h2 style="text-align: center;">Workshops</h2>
-            Still back when I used to live in Kraków, had the fortune to provide
-            some workshops for people, who were interested on my art. Some were
-            smaller, some with a bit bigger audience, but all of them enjoyed a
+            Still back when I used to live in Kraków, I had the fortune to provide
+            some workshops for people, who were interested on my art. Some gatherings were
+            smaller, some with a bit bigger audience, but all of them we enjoyed a
             lot! In this way, I could combine the two things, which - I think at
             least - I am good at: teaching and crocheting.
             <h6>*For the videos, special thanks to G.B video</h6>
@@ -114,7 +128,7 @@ In 2023 I came over one of my fears, namely solo travelling. As I am
             </a>
             Long story short: after seeing all the breahtaking pieces and the
             festival itself, a few hours later all was settled for my journey in
-            June to Barzano. Withouth hesitation and any questionmarks I just
+            June to Barzano. Without hesitation and any questionmarks I just
             knew, I have to be there. So I was.
             <p>
               I could not be happier that I fought through my anxiety, not just
@@ -139,6 +153,16 @@ In 2023 I came over one of my fears, namely solo travelling. As I am
             </p>
          
         </div>
+         <!--hamburger JS mobile nézethez-->
+  <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.maxHeight = "0";
+  }
+  </script>
     
    
     </main>
