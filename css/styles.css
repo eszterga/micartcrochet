@@ -1,3 +1,127 @@
+/*hamburger menu - default NEM látszik, mobil nézetben, 450px-tol felfele igen */
+@media screen and (min-width:450px) and (max-width:2500px) {
+
+#mySidenav {
+  display:none;
+ }  
+span{
+  display:none;
+}
+ /* The side navigation menu */
+ .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s;
+  display:none !important;
+  /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  display:none !important;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) 
+.sidenav .closebtn {
+  position: relative;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}*/
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+  display:none !important;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}  }
+/* default hamburger nem látszik vége*/
+
+/*hamburger mobil IGEN, LÁTSZIK nézet kezdete*/
+
+@media screen and (max-width:450px) {
+  .sidenav {
+    position: absolute;
+    top: 50px; /* Adjust to position below header */
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+   color: white;
+    transition: max-height 0.5s ease-out;
+    z-index: 1;
+    border-radius: 20%;
+  
+ 
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+   
+  
+  }
+  .menu:hover {
+    background-color: #8fc8d4;
+    color: #333333;
+border-radius: 25%; 
+}
+
+
+  span {
+    display:flex;
+    justify-content: left;
+  
+  }
+  
+
+  .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  padding:16px;
+    cursor:pointer;
+  } 
+  
+  #main {
+
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 20px;}
+  }  }
+
+/*mobil nézet, hamburger VÉGE */
+
 /* ez a homepage background */
 .bodybg {
   /* The image used */
@@ -65,10 +189,10 @@ body {
   font-family: "Playfair Display";
   letter-spacing: 1px;
   background: white;
- /* background-size: auto;*/
+ 
   max-width: 100%;
   max-height: 100%;
-  /*background-repeat: no-repeat;*/
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -182,7 +306,7 @@ h2 {
   }
 }
 
-/* ez a menure, navigaciora vonatkozo szabályok */
+/* ez a menure, navigaciora vonatkozo szabályok nagy nézetben */
 nav {
   display: flex;
   flex: 1;
@@ -199,6 +323,17 @@ nav {
   border-bottom: 2px solid #333333;
 }
 
+/*elrejtve nagy menu 450px-nél kisebb nézetben*/
+@media screen and (max-width:450px) {
+  nav {display: none !important;
+  }
+  .navdiv {display:none !important;}
+
+  .navdiv > div {
+    display:none !important;
+  }
+}
+
 @media screen and (min-width: 200px) and (max-width: 480px) {
   nav {
     height: 32px;
@@ -212,7 +347,7 @@ nav {
 }
 
 .navdiv > div {
-  /*width: 10%; */
+
   width:20%;
   display: flex;
   justify-content: space-evenly;
@@ -228,31 +363,6 @@ nav {
   max-width:1200px;
   flex: 1;
 }
-/* @media screen and (min-width: 769px) and (max-width: 1200px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-    flex: 1;
-  }
-}
-
-@media screen and (min-width: 200px) and (max-width: 480px) {
-  .navdiv {
-    display: flex;
-    justify-content: space-evenly;
-    width: 20%;
-    flex: 1;
-  }
-} */
 
 .menu {
   font-family: "Playfair Display";
@@ -264,9 +374,7 @@ nav {
   align-items: center;
   text-decoration: none;
   justify-content: space-evenly;
-  /*padding: 5px;
-  margin: 5px;*/
-  font-size: 26px;
+font-size: 26px;
   transition: 0.6s;
   text-align: center;
 }
@@ -316,20 +424,20 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     text-decoration: none;
-    /*padding: 2px;
-    margin: 2px; */
+
     font-size: 14px;
     transition: 0.6s;
     text-align: center;
   }
 }
 
+/*hamburger menu proba kikapcs
 .menu:hover {
   background-color: #8fc8d4;
   color: #333333;
   font-size: 30px;
   border-radius: 100%; 
-}
+} */
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .menu:hover {
@@ -343,21 +451,13 @@ nav {
   }
 }
 
+/*hamburger miatti szabály, kikapcs kicsit 
 @media screen and (min-width: 200px) and (max-width: 480px) {
   .menu:hover {
     font-size: 16px;
   }
-}
-
-/* #covercontainer {
-  width: 100%;
-  height: 20vw;
-  background-image: url(../images/totoro.jpg);
-  opacity: 80%;
-
-  background-repeat: no-repeat;
-  background-size: cover;
 } */
+
 
 /* ez a home pagere és annak contentjére vonatkozo szabályok */
 
@@ -436,22 +536,22 @@ cursor: pointer;
   .accordion {font-size: 15px;
 }  }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Hoverre háttér szin  */
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: rgb(154, 208, 194);
 }
 
-/* Style the accordion panel. Note: hidden by default */
+/* Accordion panelre vonatkozók, alapértelmezett zárva */ 
 .panel {
   padding: 0 18px;
   background-color: white;
   overflow: hidden;
-  max-height: 0; /* Hide the panel by default */
-  transition: max-height 0.2s ease-out; /* Add smooth transition for animation */
+  max-height: 0; /* Elrejtés default */
+  transition: max-height 0.2s ease-out; /* Animation */
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: '\02795'; /*  (+) lenyilo gomb */
   font-size: 13px;
   color: #777;
   float: right;
@@ -459,7 +559,7 @@ cursor: pointer;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2796"; /* bezáros (-) gomb */
 }
 
 
@@ -530,7 +630,7 @@ cursor: pointer;
   }
 }
 
-/* ez a More, video pagere vonatkozo szabályok */
+/* ez a Video pagere vonatkozo szabályok */
 
 .video-container {
   width: 33%;
@@ -591,9 +691,9 @@ cursor: pointer;
   }
 }
 
-/* ez a Gallery vonatkozo szabályok */
+/* ez a Galleryre vonatkozo szabályok */
 
-/* ez a footerre vonatkozo szabályok */
+
 
 .grid {
   display: flex;
@@ -619,7 +719,7 @@ cursor: pointer;
   background-size: cover;
   background-position: center center;
 }
-
+/* ez a footerre vonatkozo szabályok */
 
 footer {
   background: linear-gradient(
@@ -685,14 +785,11 @@ footer {
     justify-content: center;
   }
 }
-/* carousel-re vonatkozó szabályok */
+/* carousel-re vonatkozó szabályok, slideshow */
 
 * {
   box-sizing: border-box;
 }
-
-/* Slideshow container */
-
 
 .slideshow-container {
   margin: auto;
@@ -760,7 +857,7 @@ footer {
   opacity: 85%;
 }
 
-Hide the images by default
+/*alapjáraton hide */
 .slides {
   display: none;
   margin-bottom: 5px;
@@ -769,10 +866,10 @@ Hide the images by default
 .slides img {
   width: 100%;
   display: block;
-  /* Ensures images are responsive*/
+  /* képek responszivak legyenek*/
 }
 
-/* Fading animation*/
+/* Eltűnő animáció*/
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
