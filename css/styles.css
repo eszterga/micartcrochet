@@ -257,12 +257,12 @@ main {
 }
 
 h2 {
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 @media screen and (max-width: 500px) {
   h2 {
-    font-style: italic;
+    /*font-style: italic;*/
     font-size: 23px;
   }
 }
@@ -424,7 +424,7 @@ font-weight:bold;
 
 h1 {
   font-size: 30px;
-  font-style: italic;
+  /*font-style: italic; */
   font-family: "Playfair Display";
   margin: 0;
 
@@ -434,7 +434,7 @@ h1 {
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 22px;
-    font-style: italic;
+    /*font-style: italic;*/
     font-family: "Playfair Display";
     margin: 0;
 
@@ -454,11 +454,10 @@ h1 {
 
 @keyframes swim {
   0% {
-    transform: translateX(-50%); 
+    opacity: 0;
   }
-  50% {
-   
-    transform: translateX(0%);
+  100% {
+    opacity: 1;
   }
 }
 
@@ -474,7 +473,7 @@ h1 {
     justify-content:center;
     position:relative;
  top:-20px;
- animation: swim 3s ease-in-out;
+ animation: swim 2s ease-in-out;
  animation-delay:1s;
  
 
@@ -486,10 +485,10 @@ h1 {
   position:relative;
   letter-spacing: 1px;
   height: auto;
-    border: 3px solid rgb(121, 120, 120);
+    /*border: 3px solid rgb(121, 120, 120);*/
     text-align: justify; 
     overflow:hidden;
-    border-radius:25%;
+    /*border-radius:25%; */
     background-color: rgba(245, 245, 245, 0.7);
     padding:15px;
     
@@ -507,7 +506,7 @@ h1 {
   width: 100px;
   height:auto;
   margin: 0 5px 5px 0;
-  float:left;
+  float:right;
  }
 
 }
@@ -524,7 +523,7 @@ h1 {
     justify-content:center;
     position:relative;
  top:-20px;
- animation: swim 3s ease-in-out;
+ animation: swim 2s ease-in-out;
  animation-delay:1s;
   } 
   .hellotext {
@@ -533,11 +532,11 @@ h1 {
   position:relative;
   letter-spacing: 1px;
   height: auto;
-    border: 3px solid rgb(121, 120, 120);
+    /*border: 3px solid rgb(121, 120, 120);*/
     text-align: justify; 
     overflow:hidden;
-    border-radius:25%;
-    background-color: rgba(245, 245, 245, 0.7);
+    /*border-radius:25%; */
+    background-color: rgba(245, 245, 245, 0.8);
     padding:15px;
   }
 
@@ -551,53 +550,53 @@ h1 {
   width: 130px;
   height:auto;
   margin: 0 5px 5px 0;
-  float:left;
+  float:right;
  }
 }
 
 /*hello text kozepesnél nagyobb monitorra*/
 @media screen and (min-width: 769px) {
   .hellocontainer {
-  width:100%; 
-  overflow: hidden;
-  display:flex;
-  justify-content:center;
-  position:relative;
-top:-20px;
-animation: swim 3s ease-in-out;
-animation-delay:1s;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    top: -20px;
+    animation: swim 2s ease-in-out;
+    animation-delay: 1s;
+    background-color: rgba(245, 245, 245, 0.3);
+  } 
 
-} 
-.hellotext {
-  width: 85%;
-  display:block;
-position:relative;
-font-size:16px;
-letter-spacing: 1px;
-height: auto;
-  border: 3px solid rgb(121, 120, 120);
-  text-align: justify; 
-  overflow:hidden;
-  border-radius:25%;
-  background-color: rgba(245, 245, 245, 0.7);
-padding:35px;
+  .hellotext {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the content */
+    width: 100%;
+  }
+
+  .hellotextcontent {
+    flex: 1; /* Allow the text content to take up remaining space */
+    font-size: 22px;
+    letter-spacing: 1px;
+    height: auto;
+    text-align:start;
+    overflow: hidden;
+    background-color: rgba(245, 245, 245, 0.3);
+    padding: 15px;
+  }
+
+  .helloimgdiv {
+    flex: 1; /* Allow the image container to take up remaining space */
+    padding-left: 30px; /* Add some space between the text and image */
+    align-items:right;
+    display:flex;
+    justify-content:flex-end;
+  }
+
+  .helloimg {
+    max-width: 60%; /* Ensure the image does not exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline behavior */
+  }
 }
-
-.hellotextcontent {
-  padding:20px;
-
-
-
-}
-.helloimg {
-width: 130px;
-height:auto;
-margin: 0 5px 5px 0;
-float:left;
-}
-}
-
-
 /* Hello text a home pagen, mobil nézet*/
 @media screen and (max-width:480px) {
 
@@ -608,7 +607,7 @@ float:left;
     justify-content:center;
     position:relative;
  top:-20px;
- animation: swim 3s ease-in-out;
+ animation: swim 2s ease-in-out;
 
   } 
   .hellotext {
@@ -617,10 +616,10 @@ float:left;
   position:relative;
   letter-spacing: 1px;
   height: auto;
-    border: 3px solid rgb(121, 120, 120);
+    /*border: 3px solid rgb(121, 120, 120);*/
     text-align: justify; 
     overflow:hidden;
-    border-radius:25%;
+    /*border-radius:25%;*/
     background-color: rgba(245, 245, 245, 0.7);
     padding:15px;
  
@@ -635,7 +634,7 @@ float:left;
   width: 100px;
   height:auto;
   margin: 0 5px 5px 0;
-  float:left;
+  float:right;
  }
 
 }
@@ -736,7 +735,7 @@ cursor: pointer;
 
 .social {
   font-family: "Playfair Display";
-  font-style: italic;
+  /*font-style: italic;*/
   padding-top: 20px;
 }
 
