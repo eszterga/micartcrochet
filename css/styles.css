@@ -442,6 +442,206 @@ h1 {
   }
 }
 
+.hellocontainer {
+ display:flex;
+ margin-top: 100px;
+ animation: swim 
+
+  
+}
+
+/*hello text animation, beuszás*/
+
+@keyframes swim {
+  0% {
+    transform: translateX(-50%); 
+  }
+  50% {
+   
+    transform: translateX(0%);
+  }
+}
+
+
+
+/* Hello a home pagen, kicsi/mobil nézet*/
+@media screen and (max-width:450px) {
+
+  .hellocontainer {
+    width:100%; 
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    position:relative;
+ top:-20px;
+ animation: swim 3s ease-in-out;
+ animation-delay:1s;
+ 
+
+
+  } 
+  .hellotext {
+    width: 95%;
+    display:block;
+  position:relative;
+  letter-spacing: 1px;
+  height: auto;
+    border: 3px solid rgb(121, 120, 120);
+    text-align: justify; 
+    overflow:hidden;
+    border-radius:25%;
+    background-color: rgba(245, 245, 245, 0.7);
+    padding:15px;
+    
+ 
+  }
+
+  .hellotextcontent {
+    padding:15px;
+  
+  
+  
+  }
+
+.helloimg {
+  width: 100px;
+  height:auto;
+  margin: 0 5px 5px 0;
+  float:left;
+ }
+
+}
+
+/*hello text kozepes monitorra*/
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+
+  .hellocontainer {
+    width:100%; 
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    position:relative;
+ top:-20px;
+ animation: swim 3s ease-in-out;
+ animation-delay:1s;
+  } 
+  .hellotext {
+    width: 75%;
+    display:block;
+  position:relative;
+  letter-spacing: 1px;
+  height: auto;
+    border: 3px solid rgb(121, 120, 120);
+    text-align: justify; 
+    overflow:hidden;
+    border-radius:25%;
+    background-color: rgba(245, 245, 245, 0.7);
+    padding:15px;
+  }
+
+  .hellotextcontent {
+    padding:15px;
+  
+  
+  
+  }
+.helloimg {
+  width: 130px;
+  height:auto;
+  margin: 0 5px 5px 0;
+  float:left;
+ }
+}
+
+/*hello text kozepesnél nagyobb monitorra*/
+@media screen and (min-width: 769px) {
+  .hellocontainer {
+  width:100%; 
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  position:relative;
+top:-20px;
+animation: swim 3s ease-in-out;
+animation-delay:1s;
+
+} 
+.hellotext {
+  width: 85%;
+  display:block;
+position:relative;
+font-size:16px;
+letter-spacing: 1px;
+height: auto;
+  border: 3px solid rgb(121, 120, 120);
+  text-align: justify; 
+  overflow:hidden;
+  border-radius:25%;
+  background-color: rgba(245, 245, 245, 0.7);
+padding:35px;
+}
+
+.hellotextcontent {
+  padding:20px;
+
+
+
+}
+.helloimg {
+width: 130px;
+height:auto;
+margin: 0 5px 5px 0;
+float:left;
+}
+}
+
+
+/* Hello text a home pagen, mobil nézet*/
+@media screen and (max-width:480px) {
+
+  .hellocontainer {
+    width:100%; 
+    overflow: hidden;
+    display:flex;
+    justify-content:center;
+    position:relative;
+ top:-20px;
+ animation: swim 3s ease-in-out;
+
+  } 
+  .hellotext {
+    width: 95%;
+    display:block;
+  position:relative;
+  letter-spacing: 1px;
+  height: auto;
+    border: 3px solid rgb(121, 120, 120);
+    text-align: justify; 
+    overflow:hidden;
+    border-radius:25%;
+    background-color: rgba(245, 245, 245, 0.7);
+    padding:15px;
+ 
+  }
+  .hellotextcontent {
+    padding:15px;
+  
+  
+  
+  }
+.helloimg {
+  width: 100px;
+  height:auto;
+  margin: 0 5px 5px 0;
+  float:left;
+ }
+
+}
+
+
+
 /* ez lesz az About pagere vonatkozok */
 .intro::first-letter {
   font-size: 40px;
@@ -475,6 +675,9 @@ h1 {
     width: 180px;
   }
 }
+
+
+
 
 /* accordion az about page-en */
 
