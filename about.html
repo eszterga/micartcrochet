@@ -22,7 +22,7 @@
           
   </nav>
  <!-- hamburger menu-->    
-<div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)";>
+<div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799;</a>
 
   <a href="index.html" class="menu">Home</a>
@@ -32,7 +32,7 @@
   <a href="contact.html" class="menu">Contact</a>
 </div>
 
-<div id="main"style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+<div id="main" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
   <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()">Menu&#9776;</span>
 </div>
         </header>
@@ -76,7 +76,7 @@ is Mica since decades, when I finished nail art school I "had to come up" with a
 <p class="intro"> I took my phone/laptop and searched on Youtube/Google to find video tutorials for beginners and fast forward today: here I am. At the point where crochet is not a simple passion anymore,
 more like a lifestyle, a way of life - which of course escalated into learning punchneedling and yes: I've just recently bought my first sewing maschine. </p>
          
-</article>
+</div>
 <br>
 
 <button class="accordion">What is it good for? </button>
@@ -116,18 +116,8 @@ the most precious gift, you can give to someone/anyone. </p> </div>
 
         </div> 
       </div>
-</article>
- <!--hamburger JS mobile nézethez-->
- <script>
-  function openNav() {
-  document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
-}
 
-function closeNav() {
-  document.getElementById("mySidenav").style.maxHeight = "0";
-}
-</script>
-    
+      </section>
 </main>
 
 <footer>
@@ -138,9 +128,19 @@ function closeNav() {
       </p>
     </section>
   </footer>
+<!--hamburger JS mobile nézethez-->
+<script>
+  function openNav() {
+  document.getElementById("mySidenav").style.maxHeight = "300px"; 
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.maxHeight = "0";
+}
+</script>
+    
 
-
+<!--JS az accordionhoz-->
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -157,6 +157,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-  </script>
+
 </body>
 </html>
