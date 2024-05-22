@@ -290,6 +290,8 @@ nav {
   border-bottom: 2px solid #333333;
 }
 
+
+
 /*elrejtve nagy menu 450px-nél kisebb nézetben*/
 @media screen and (max-width:450px) {
   nav {display: none !important;
@@ -305,6 +307,7 @@ nav {
 @media screen and (min-width: 451px) and (max-width: 768px) {
   nav {
     height: 32px;
+    display:relative;
   }
 }
 
@@ -325,6 +328,8 @@ nav {
   max-width:1200px;
   flex: 1;
 }
+
+
 
 .menu {
   font-family: "Playfair Display";
@@ -418,13 +423,11 @@ font-weight:bold;
   }
 }
 
-
-
 /* ez a home pagere és annak contentjére vonatkozo szabályok */
 
 h1 {
   font-size: 30px;
-  /*font-style: italic; */
+
   font-family: "Playfair Display";
   margin: 0;
 
@@ -434,7 +437,7 @@ h1 {
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 22px;
-    /*font-style: italic;*/
+   
     font-family: "Playfair Display";
     margin: 0;
 
@@ -463,183 +466,204 @@ h1 {
 
 
 
-/* Hello a home pagen, kicsi/mobil nézet*/
-@media screen and (max-width:450px) {
-
-  .hellocontainer {
-    width:100%; 
-    overflow: hidden;
-    display:flex;
-    justify-content:center;
-    position:relative;
- top:-20px;
- animation: swim 2s ease-in-out;
- animation-delay:1s;
- 
-
-
-  } 
-  .hellotext {
-    width: 95%;
-    display:block;
-  position:relative;
-  letter-spacing: 1px;
-  height: auto;
-    /*border: 3px solid rgb(121, 120, 120);*/
-    text-align: justify; 
-    overflow:hidden;
-    /*border-radius:25%; */
-    background-color: rgba(245, 245, 245, 0.7);
-    padding:15px;
-    
- 
-  }
-
-  .hellotextcontent {
-    padding:15px;
-  
-  
-  
-  }
-
-.helloimg {
-  width: 100px;
-  height:auto;
-  margin: 0 5px 5px 0;
-  float:right;
- }
-
+/* hello page Default styles nagyobb képernyore (2200px és felette, 1200ig jo) */
+.hellocontainer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  top: -20px;
+  animation: swim 2s ease-in-out;
+  animation-delay: 1s;
+  background-color: rgba(245, 245, 245, 0.3);
 }
 
-/*hello text kozepes monitorra*/
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
-
-  .hellocontainer {
-    width:100%; 
-    overflow: hidden;
-    display:flex;
-    justify-content:center;
-    position:relative;
- top:-20px;
- animation: swim 2s ease-in-out;
- animation-delay:1s;
-  } 
-  .hellotext {
-    width: 75%;
-    display:block;
-  position:relative;
-  letter-spacing: 1px;
-  height: auto;
-    /*border: 3px solid rgb(121, 120, 120);*/
-    text-align: justify; 
-    overflow:hidden;
-    /*border-radius:25%; */
-    background-color: rgba(245, 245, 245, 0.8);
-    padding:15px;
-  }
-
-  .hellotextcontent {
-    padding:15px;
-  
-  
-  
-  }
-.helloimg {
-  width: 130px;
-  height:auto;
-  margin: 0 5px 5px 0;
-  float:right;
- }
+.hellotext {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  width: 100%;
 }
 
-/*hello text kozepesnél nagyobb monitorra*/
-@media screen and (min-width: 769px) {
+.hellotextcontent {
+  flex: 1;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: start;
+  overflow: hidden;
+  background-color: rgba(245, 245, 245, 0.3);
+  padding: 15px;
+}
+
+.helloimgdiv {
+  flex: 1;
+  padding-left: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.helloimg {
+  max-width: 60%;
+  height: auto;
+  display: block;
+}
+
+/*kozepes screen hello */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
   .hellocontainer {
-    width: 100%;
-    overflow: hidden;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hellotext {
     display: flex;
-    top: -20px;
-    animation: swim 2s ease-in-out;
-    animation-delay: 1s;
-    background-color: rgba(245, 245, 245, 0.3);
-  } 
-
-  .hellotext {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center the content */
+    align-items: center;
     width: 100%;
   }
 
   .hellotextcontent {
-    flex: 1; /* Allow the text content to take up remaining space */
-    font-size: 22px;
+    flex: 1;
+    font-size: 21px;
     letter-spacing: 1px;
-    height: auto;
-    text-align:start;
+    text-align: start;
     overflow: hidden;
     background-color: rgba(245, 245, 245, 0.3);
     padding: 15px;
   }
 
   .helloimgdiv {
-    flex: 1; /* Allow the image container to take up remaining space */
-    padding-left: 30px; /* Add some space between the text and image */
-    align-items:right;
-    display:flex;
-    justify-content:flex-end;
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .helloimg {
-    max-width: 60%; /* Ensure the image does not exceed its container width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any default inline behavior */
+    max-width: 80%;
+    height: auto;
+    display: block;
   }
 }
-/* Hello text a home pagen, mobil nézet*/
-@media screen and (max-width:480px) {
 
+/* hello content még kisebb, mobilos nézet (max-width: 480px) */
+/* Clearfix to handle floating elements */
+.hellotext::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* hello text kicsi-kozepes */
+@media screen and (min-width: 500px) and (max-width: 700px) {
   .hellocontainer {
-    width:100%; 
-    overflow: hidden;
-    display:flex;
-    justify-content:center;
-    position:relative;
- top:-20px;
- animation: swim 2s ease-in-out;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  } 
   .hellotext {
-    width: 95%;
-    display:block;
-  position:relative;
-  letter-spacing: 1px;
-  height: auto;
-    /*border: 3px solid rgb(121, 120, 120);*/
-    text-align: justify; 
-    overflow:hidden;
-    /*border-radius:25%;*/
-    background-color: rgba(245, 245, 245, 0.7);
-    padding:15px;
- 
+    width: 100%;
   }
-  .hellotextcontent {
-    padding:15px;
-  
-  
-  
-  }
-.helloimg {
-  width: 100px;
-  height:auto;
-  margin: 0 5px 5px 0;
-  float:right;
- }
 
+  .hellotextcontent {
+    font-size: 19px;
+    padding: 5px;
+    text-align: start;
+  }
+
+  .helloimg {
+    max-width: 80%;
+    height: auto;
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+
+  .helloimgdiv {
+    width: 100%;
+    display: inline-block;
+    padding-left: 5px;
+  }
 }
 
+@media screen and (min-width: 380px) and (max-width: 500px) {
+  .hellocontainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .hellotext {
+    width: 100%;
+  }
+
+  .hellotextcontent {
+    font-size: 18px;
+    padding: 5px;
+    text-align: start;
+  }
+
+  .helloimg {
+    max-width: 100%;
+    height: auto;
+    float: right;
+    margin: 0 0 10px 10px;
+
+  }
+
+  .helloimgdiv {
+    width: 100%;
+    display: inline-block;
+    padding-left: 2px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 380px) {
+  .hellotextcontent::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .hellocontainer {
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+
+  .hellotext {
+    width: 100%;
+    
+  }
+
+  .hellotextcontent {
+    font-size: 17px;
+    padding: 2px;
+    text-align: start;
+    
+  }
+
+  .helloimg {
+    max-width: 100%;
+    height: auto;
+    float: right;
+    margin: 0 0 10px 10px;
+   top:165px;
+    position:absolute;
+    width:40%;
+    height:auto;
+  
+
+
+  }
+
+  .helloimgdiv {
+    width: 100%;
+    display: inline-block;
+    padding-left: 2px;
+
+  }
+}
 
 /* ez lesz az About pagere vonatkozok */
 .intro::first-letter {
