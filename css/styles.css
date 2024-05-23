@@ -868,6 +868,9 @@ h1 {
     margin: 20px;
   }
 }
+.clickmobile {
+  display:none;
+}
 
 /* ez a Galleryre vonatkozo szabályok, alaértelmezett majd kisebb nézet */
 @media screen and (min-width:200px) and (max-width:2500px) { 
@@ -911,8 +914,8 @@ background-size: cover;
 .playbutton {
   display: flex !important;
   flex:1;
-  width: 110px; /* Adjust as needed */
-  height: 80px; /* Adjust as needed */
+  width: 70px; /* Adjust as needed */
+  height: 70px; /* Adjust as needed */
   position: absolute;
   top: 33%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
@@ -920,7 +923,13 @@ background-size: cover;
   z-index: 1;
   color: whitesmoke;
  
-}  }
+} 
+.clickmobile {
+  display: block !important;
+  margin-top:5px;
+}  
+
+}
 
   
 
