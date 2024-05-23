@@ -1,115 +1,115 @@
 /*hamburger menu - default NEM látszik, mobil nézetben, 450px-tol felfele igen */
-@media screen and (min-width:450px) and (max-width:2500px) {
+@media screen and (min-width: 450px) and (max-width: 2500px) {
+  #mySidenav {
+    display: none;
+  }
+  span {
+    display: none;
+  }
+  /* Side navigation menu */
+  .sidenav {
+    display: none !important;
+  }
 
-#mySidenav {
-  display:none;
- }  
-span{
-  display:none;
+  /* Navigation menu linek */
+  .sidenav a {
+    display: none !important;
+  }
+
+  #main {
+    display: none !important;
+  }
+
+  /* default hamburger NEM látszik vége*/
+
+  /*hamburger mobil IGEN, LÁTSZIK nézet kezdete*/
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
 }
- /* Side navigation menu */
- .sidenav {
-  display:none !important;
-  
-}
 
-/* Navigation menu linek */
-.sidenav a {
-
-  display:none !important;
-}
-
-#main {
-
-  display:none !important;
-}
-
-/* default hamburger nem látszik vége*/
-
-/*hamburger mobil IGEN, LÁTSZIK nézet kezdete*/
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}  }
-
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
   .sidenav {
     position: absolute;
-    top: 50px; 
+    top: 50px;
     left: 0;
     width: 100%;
     max-height: 0;
     overflow: hidden;
-   color: white;
+    color: white;
     transition: max-height 0.5s ease-out;
     z-index: 1;
     border-radius: 23%;
-  
- 
   }
-  
+
   .sidenav a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 20px;
     color: whitesmoke;
-    
   }
   .menu:hover {
-color: #333333;
-text-decoration:underline ;
-font-size:24px;
-font-weight:bold;
-
-}
+    color: #333333;
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: none;
+  }
 
   span {
-    display:flex;
+    display: flex;
     justify-content: right;
-  
   }
-  
-  .closebtn {
-  position: absolute;
-  right: 9px;
-  padding:16px;
-  cursor:pointer;
-  } 
-  
-  #main {
 
+  .closebtn {
+    position: absolute;
+    right: 9px;
+    padding: 16px;
+    cursor: pointer;
+  }
+
+  #main {
     padding: 16px;
   }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 20px;}
-  }  }
 
-/*mobil nézet, hamburger VÉGE */
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 20px;
+    }
+  }
+}
+
+/*mobil nézet, hamburger LÁTSZIK VÉGE */
 
 /* ez a homepage background */
 .bodybg {
-  
   background-image: url("../images/pexels-punchbrandstock-5714855.jpg");
-height: 100%; 
-background-position:center;
+  height: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .bodybg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.2); 
-  z-index: -1; 
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
 }
 
 /* ez a cookie warning */
@@ -156,17 +156,16 @@ body {
   font-family: "Playfair Display";
   letter-spacing: 1px;
   background: white;
- 
+
   max-width: 100%;
   max-height: 100%;
-  
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   font-size: 18px;
   line-height: 1.5em;
-;
 }
 
 @media screen and (min-width: 200px) and (max-width: 480px) {
@@ -256,10 +255,6 @@ main {
   font-style: italic;
 }
 
-h2 {
-  /*font-style: italic;*/
-}
-
 @media screen and (max-width: 500px) {
   h2 {
     /*font-style: italic;*/
@@ -290,30 +285,29 @@ nav {
   border-bottom: 2px solid #333333;
 }
 
-
-
 /*elrejtve nagy menu 450px-nél kisebb nézetben*/
-@media screen and (max-width:450px) {
-  nav {display: none !important;
+@media screen and (max-width: 450px) {
+  nav {
+    display: none !important;
   }
-  .navdiv {display:none !important;}
+  .navdiv {
+    display: none !important;
+  }
 
   .navdiv > div {
-    display:none !important;
+    display: none !important;
   }
 }
-
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
   nav {
     height: 32px;
-    display:relative;
+    display: relative;
   }
 }
 
 .navdiv > div {
-
-  width:20%;
+  width: 20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -325,11 +319,9 @@ nav {
   display: flex;
   justify-content: space-evenly;
 
-  max-width:1200px;
+  max-width: 1200px;
   flex: 1;
 }
-
-
 
 .menu {
   font-family: "Playfair Display";
@@ -341,7 +333,7 @@ nav {
   align-items: center;
   text-decoration: none;
   justify-content: space-evenly;
-font-size: 26px;
+  font-size: 26px;
   transition: 0.6s;
   text-align: center;
 }
@@ -398,28 +390,27 @@ font-size: 26px;
   }
 }
 
-@media screen and (min-width:1200px){ 
+@media screen and (min-width: 1200px) {
   .menu:hover {
-  color: #333333;
-  font-weight:bold;
-  font-size:30px;
-
-} }
-
+    color: #333333;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .menu:hover {
     font-size: 25px;
-color: #333333;
-font-weight:bold;
-} }
-
+    color: #333333;
+    font-weight: bold;
+  }
+}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .menu:hover {
     font-size: 22px;
     color: #333333;
-font-weight:bold;
+    font-weight: bold;
   }
 }
 
@@ -437,7 +428,7 @@ h1 {
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 22px;
-   
+
     font-family: "Playfair Display";
     margin: 0;
 
@@ -446,11 +437,9 @@ h1 {
 }
 
 .hellocontainer {
- display:flex;
- margin-top: 100px;
- animation: swim 
-
-  
+  display: flex;
+  margin-top: 100px;
+  animation: swim;
 }
 
 /*hello text animation, beuszás*/
@@ -463,8 +452,6 @@ h1 {
     opacity: 1;
   }
 }
-
-
 
 /* hello page Default styles nagyobb képernyore (2200px és felette, 1200ig jo) */
 .hellocontainer {
@@ -507,6 +494,7 @@ h1 {
   max-width: 60%;
   height: auto;
   display: block;
+  border-radius:15%;
 }
 
 /*kozepes screen hello */
@@ -608,7 +596,6 @@ h1 {
     height: auto;
     float: right;
     margin: 0 0 10px 10px;
-
   }
 
   .helloimgdiv {
@@ -624,23 +611,20 @@ h1 {
     display: table;
     clear: both;
   }
-  
+
   .hellocontainer {
     flex-direction: column;
     align-items: flex-start;
-  
   }
 
   .hellotext {
     width: 100%;
-    
   }
 
   .hellotextcontent {
     font-size: 17px;
     padding: 2px;
     text-align: start;
-    
   }
 
   .helloimg {
@@ -648,20 +632,16 @@ h1 {
     height: auto;
     float: right;
     margin: 0 0 10px 10px;
-   top:165px;
-    position:absolute;
-    width:40%;
-    height:auto;
-  
-
-
+    top: 165px;
+    position: absolute;
+    width: 40%;
+    height: auto;
   }
 
   .helloimgdiv {
     width: 100%;
     display: inline-block;
     padding-left: 2px;
-
   }
 }
 
@@ -699,18 +679,15 @@ h1 {
   }
 }
 
-
-
-
 /* accordion az about page-en */
 
 .accordion {
   background-color: rgba(45, 149, 150, 0.8);
   color: black;
-  font-weight:bold;
-  font-size:20px;
+  font-weight: bold;
+  font-size: 20px;
   font-family: "Playfair Display";
-cursor: pointer;
+  cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: center;
@@ -719,16 +696,19 @@ cursor: pointer;
   transition: 0.4s;
 }
 
-@media screen and (max-width:600px) {
-  .accordion {font-size: 15px;
-}  }
+@media screen and (max-width: 600px) {
+  .accordion {
+    font-size: 15px;
+  }
+}
 
 /* Hoverre háttér szin  */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: rgb(154, 208, 194);
 }
 
-/* Accordion panelre vonatkozók, alapértelmezett zárva */ 
+/* Accordion panelre vonatkozók, alapértelmezett zárva */
 .panel {
   padding: 0 18px;
   background-color: white;
@@ -738,7 +718,7 @@ cursor: pointer;
 }
 
 .accordion:after {
-  content: '\02795'; /*  (+) lenyilo gomb */
+  content: "\02795"; /*  (+) lenyilo gomb */
   font-size: 13px;
   color: #777;
   float: right;
@@ -748,7 +728,6 @@ cursor: pointer;
 .active:after {
   content: "\2796"; /* bezáros (-) gomb */
 }
-
 
 /* ez a contact pagere vonatkozo szabályok */
 .socialimage {
@@ -766,8 +745,21 @@ cursor: pointer;
 @media screen and (min-width: 200px) and (max-width: 600px) {
   .social > .socialimage {
     width: 28px;
-    margin-right: 10px;
+    margin-right: 5px;
     display: inline-block;
+  }
+  .content > article {
+    display: block;
+    left: 7px;
+    padding: 15px 5px 15px 5px;
+  }
+  .content {
+    padding: 0px;
+    margin: 15px;
+  }
+
+  .socialsection {
+    margin: 5px;
   }
 }
 
@@ -874,13 +866,10 @@ cursor: pointer;
   }
   div.content {
     margin: 20px;
-
   }
 }
 
-/* ez a Galleryre vonatkozo szabályok */
-
-
+/* ez a Galleryre vonatkozo szabályok, alaértelmezett majd kisebb nézet */
 
 .grid {
   display: flex;
@@ -906,6 +895,8 @@ cursor: pointer;
   background-size: cover;
   background-position: center center;
 }
+  
+
 /* ez a footerre vonatkozo szabályok */
 
 footer {
@@ -1070,6 +1061,3 @@ footer {
     opacity: 1;
   }
 }
-
-
-
