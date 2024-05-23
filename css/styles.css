@@ -870,7 +870,7 @@ h1 {
 }
 
 /* ez a Galleryre vonatkozo szabályok, alaértelmezett majd kisebb nézet */
-
+@media screen and (min-width:200px) and (max-width:2500px) { 
 .grid {
   display: flex;
   gap: 20px;
@@ -879,22 +879,49 @@ h1 {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 800px) {
-  .grid {
-    flex-direction: column;
-  }
-
-  .img {
-    width: 100%;
-  }
-}
-
 .img {
   flex: 1;
   aspect-ratio: 0.6;
   background-size: cover;
   background-position: center center;
 }
+
+.playbutton {
+  display:none !important;
+}  }
+
+@media screen and (max-width: 800px) {
+.grid {
+    flex-direction: column;
+    display:flex;
+   align-items: center;
+  }
+
+  
+  .grid :nth-child(n+2) {
+    display: none !important;
+  }
+  .img {
+  flex: 1;
+  width:70%;
+background-size: cover;
+  background-position: center center;
+  }
+
+.playbutton {
+  display: flex !important;
+  flex:1;
+  width: 110px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  position: absolute;
+  top: 33%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: whitesmoke;
+ 
+}  }
+
   
 
 /* ez a footerre vonatkozo szabályok */
