@@ -734,12 +734,20 @@ h1 {
   width: 40px;
   margin-right: 10px;
   display: inline-block;
+
+}
+
+.social > a
+{
+  text-decoration: none;
+
 }
 
 .social {
   font-family: "Playfair Display";
   /*font-style: italic;*/
   padding-top: 20px;
+
 }
 
 .socialcontent {
@@ -984,7 +992,7 @@ width:15%;
 }  }
 
 
-@media screen and (max-width:365px) { 
+@media screen and (max-width:370px) { 
  
 
   .playbutton {
