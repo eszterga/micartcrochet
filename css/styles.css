@@ -731,11 +731,10 @@ h1 {
 
 /* ez a contact pagere vonatkozo szabályok */
 .socialimage {
-  width: 40px;
-  margin-right: 10px;
-  display: inline-block;
-
+ width: 5%;
+  margin-right: 20px;
 }
+
 
 .social > a
 {
@@ -743,16 +742,22 @@ h1 {
 
 }
 
+
 .social {
   font-family: "Playfair Display";
   /*font-style: italic;*/
-  padding-top: 20px;
+  padding: 20px;
+
+  
 
 }
 
 .socialcontent {
   margin-bottom: 20px;
+ 
 }
+
+
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
   .social > .socialimage {
