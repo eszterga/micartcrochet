@@ -21,7 +21,7 @@
       <a href="contact.html" class="menu">Contact</a></div>
         
 </nav>
-<!-- hamburger menu-->    
+<!-- hamburger menu JS-->    
 <div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)";>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799;</a>
 
@@ -32,32 +32,63 @@
   <a href="contact.html" class="menu">Contact</a>
 </div>
 
-<div id="main"style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
-  <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()">Menu&#9776;</span>
+<div id="main" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)">
+  <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()" class="spanmenu">Menu&#9776;</span>
 </div>
       </header>
   <main>
   <section class="socialsection">
-  <div class="content"> 
+  <div class="socialcontent"> 
     <article class="social">
-<img src="images/mobile.jpg" class="socialimage">+43 - 677 - 6473 - 7151 </article> </p>
+<img src="images/mobile.jpg" class="socialimage" alt="mobile">+43 - 677 - 6473 - 7151 </article> </p>
     
   <article class="social">
-    <img src="images/whatsapp.jpg" class="socialimage">+48 - 72 -814 - 43 - 54 
+    <img src="images/whatsapp.jpg" class="socialimage" alt="whatsapp">+48 - 72 -814 - 43 - 54 
   </article>
 
   <article class="social">
-    <img src="images/gmail.png" class="socialimage" width="20"><a href="mailto:micartcrochet@gmail.com">micartcrochet@gmail.com</a>
+    <img src="images/gmail.png" class="socialimage" alt="gmail" width="20"><a href="mailto:micartcrochet@gmail.com">micartcrochet@gmail.com</a>
   </article>
    
   <article class="social">
-  <img src="images/fb.jpg" class="socialimage"><a href="https://www.facebook.com/micartcrochet">Micartcrochet</a>
+  <img src="images/fb.jpg" class="socialimage" alt="facebook"><a href="https://www.facebook.com/micartcrochet">Micartcrochet</a>
 </article>
  
 <article class="social">
-  <img src="images/ig.jpg" class="socialimage"><a href="https://www.instagram.com/micart_crochet" >micart_crochet</a>
+  <img src="images/ig.jpg" class="socialimage" alt="instagram"><a href="https://www.instagram.com/micart_crochet" >micart_crochet</a>
 </article>
 </div>
+
+<!--contact form html-je-->
+
+<div class="formcontainer">
+  <form action="thankyou.html">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+    <label for="subject">Subject</label>
+    <select id="subject" name="subject">
+      <option value="comission">Comission</option>
+      <option value="workshop">Workshop</option>
+      <option value="special">Special order</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="How can I help you...?" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div> 
+
+
+
+
   </section>
 
 
@@ -82,9 +113,6 @@ function closeNav() {
 </main>
 
 
-    
-
-  
 <footer>
   <section class="footer">
     <p class="footerp">
