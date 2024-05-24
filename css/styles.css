@@ -850,7 +850,8 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  border-color:  rgba(245, 245, 245);;
+  border-color:  rgba(245, 245, 245);
+  margin-top: 25px;
 } 
 
 
