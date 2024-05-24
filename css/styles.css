@@ -62,7 +62,7 @@
     background-color: none;
   }
 
-  span {
+  .spanmenu {
     display: flex;
     justify-content: right;
   }
@@ -742,18 +742,22 @@ h1 {
   padding-top: 20px;
 }
 
+.socialcontent {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 200px) and (max-width: 600px) {
   .social > .socialimage {
     width: 28px;
     margin-right: 5px;
     display: inline-block;
   }
-  .content > article {
+  .socialcontent > article {
     display: block;
     left: 7px;
     padding: 15px 5px 15px 5px;
   }
-  .content {
+  .socialcontent {
     padding: 0px;
     margin: 15px;
   }
@@ -807,6 +811,62 @@ h1 {
     transform: translateY(-350px);
     opacity: 0%;
   }
+}
+
+/* contact page contact formra vonatkozo szabalyo */
+
+
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 2px solid #333333; /*belso részek bordere*/
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+
+}
+
+/* submit gomb tulajdonságok */
+input[type=submit] {
+  background-color: rgba(45, 149, 150, 0.8);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+/* hoverre a submit button */
+input[type=submit]:hover {
+  background-color: rgb(154, 208, 194);
+}
+
+/* Add a background color and some padding around the form */
+.formcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-color:  rgba(245, 245, 245);;
+} 
+
+
+/* thank you, farewell page, form után */
+
+.thankyoucontainer {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
+flex:1;
+}
+
+.giphy {
+  width:40%;
+
 }
 
 /* ez a Video pagere vonatkozo szabályok */
