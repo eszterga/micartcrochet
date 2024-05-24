@@ -70,14 +70,15 @@
 <div class="formcontainer">
   <form action="thankyou.html">
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+    <label for="fname">First Name*</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name...">
 
-    <label for="subject">Subject</label>
-    <select id="subject" name="subject">
+    <label for="subject">Subject*</label>
+    <select id="subject" name="subject" required>
+      <option value="">-</option>
       <option value="comission">Comission</option>
       <option value="workshop">Workshop</option>
       <option value="special">Special order</option>
