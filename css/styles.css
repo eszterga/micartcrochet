@@ -984,16 +984,16 @@ width:15%;
 }  }
 
 
-@media screen and (max-width:380px) { 
+@media screen and (max-width:365px) { 
  
 
   .playbutton {
     display: flex !important;
     flex:1;
-    width: 45px; /* Adjust as needed */
-    height: 40px; /* Adjust as needed */
+    width: 45px; 
+    height: 40px; 
     position: absolute;
-    top: 33%; /* Adjust as needed */
+    top: 37%; /* Adjust as needed */
     left: 50%; /* Adjust as needed */
     transform: translate(-50%, -50%);
     z-index: 1;
