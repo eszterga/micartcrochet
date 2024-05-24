@@ -870,6 +870,20 @@ flex:1;
 
 }
 
+.thankyouback {
+background-color:  rgba(45, 149, 150, 0.8);
+border-radius:10%;
+overflow:hidden;
+color:whitesmoke;
+font-weight:bold;
+width:15%;
+ }
+
+.backtext {
+  text-decoration: none;
+  
+}
+
 /* ez a Video pagere vonatkozo szabályok */
 
 .video-container {
