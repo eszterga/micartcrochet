@@ -59,7 +59,7 @@
     text-decoration: underline;
     font-size: 24px;
     font-weight: bold;
-    background-color: none;
+    background-color: transparent;
   }
 
   .spanmenu {
@@ -209,7 +209,7 @@ body {
 main {
   margin-left: 22%;
   margin-right: 22%;
-  background-color: rgb 245, 245, 245;
+  background-color: rgba(245, 245, 245, 0.2);
   margin-bottom: 50px;
 }
 
@@ -251,7 +251,7 @@ main {
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 400px;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -302,7 +302,7 @@ nav {
 @media screen and (min-width: 451px) and (max-width: 768px) {
   nav {
     height: 32px;
-    display: relative;
+    position: relative;
   }
 }
 
@@ -787,7 +787,7 @@ h1 {
   float: right;
   transform: rotate(-45deg);
   animation-name: steps;
-  animation-iteration-count: intinite;
+  animation-iteration-count: infinite;
 }
 
 .paw :nth-child(odd) {
