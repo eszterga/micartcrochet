@@ -882,15 +882,23 @@ flex:1;
   width:40%;
 
 }
-
 .thankyouback {
-background-color:  rgba(45, 149, 150, 0.8);
-border-radius:10%;
-overflow:hidden;
-color:whitesmoke;
-font-weight:bold;
-width:15%;
- }
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: rgba(45, 149, 150, 0.8);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.thankyouback:hover {
+  background-color: rgb(154, 208, 194);
+}
 
 .backtext {
   text-decoration: none;
