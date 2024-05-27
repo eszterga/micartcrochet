@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="Yarn art" content="MicartCrochet, where things turn into something beautiful. Handmade crochet, punchneedle and sewed items, patterns">    <title>MicartCrochet 🐾❤ &#129526;</title>
-    <link rel="icon" type="image/png" href="images/yarnball2.png" title="yarn icon">    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta
+      name="Yarn art"
+      content="MicartCrochet, where things turn into something beautiful. Handmade crochet, punchneedle and sewed items, patterns"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicartCrochet 🐾❤ &#129526;</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/yarnball2.png"
+      title="yarn icon"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/lightbox.css" />
   </head>
-  <body class="bodybg">
+  <body>
     <header>
       <nav id="nav">
         <div class="navdiv">
-          
           <a href="index.html" class="menu">Home</a>
           <a href="about.html" class="menu">About</a>
           <a href="gallery.html" class="menu">Gallery</a>
@@ -24,20 +35,56 @@
         </div>
       </nav>
 
-      <div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%)">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &#10799;</a>
-      
+      <!-- hamburger menu-->
+      <div
+        id="mySidenav"
+        class="sidenav"
+        style="
+          background: linear-gradient(
+            315deg,
+            rgb(33, 71, 102) 0%,
+            rgba(38, 80, 115) 20%,
+            rgb(45, 149, 150) 40%,
+            rgb(154, 208, 194) 90%
+          );
+        "
+      >
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          &#10799;</a
+        >
+
         <a href="index.html" class="menu">Home</a>
         <a href="about.html" class="menu">About</a>
         <a href="gallery.html" class="menu">Gallery</a>
         <a href="video.html" class="menu">Video</a>
         <a href="contact.html" class="menu">Contact</a>
       </div>
-      
-      <div id="main" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
-        <span style="cursor:pointer; font-family:Playfair Display; color:whitesmoke; font-size: 24px;" onclick="openNav()" class="spanmenu">Menu&#9776;</span>
+
+      <div
+        id="main"
+        style="
+          background: linear-gradient(
+            315deg,
+            rgb(33, 71, 102) 0%,
+            rgba(38, 80, 115) 20%,
+            rgb(45, 149, 150) 40%,
+            rgb(154, 208, 194) 90%
+          );
+        "
+      >
+        <span
+          style="
+            cursor: pointer;
+            font-family: Playfair Display;
+            color: whitesmoke;
+            font-size: 24px;
+          "
+          onclick="openNav()"
+          class="spanmenu"
+          >Menu&#9776;</span
+        >
       </div>
-          </header>
+    </header>
 
     <main>
       <section id="cookiewarning">
@@ -51,21 +98,26 @@
         </div>
       </section>
 
-
-    <div class="hellocontainer">
-      <div class="hellotext"> 
-      <article class="hellotextcontent"> <h3>Hi!</h3> My name is Mica - a Hungarian girl that runs this page about crochet
-        and other (yarn) related crafts. <br> <br> I am an animal and art lover, definitely a crazy Freddie Mercury fan, dancer, poker player, water, sun and yarn addict...and many more. <br>
-       <br> Read about my journey <a href="about.html">here</a> and check my <a href="gallery.html"> gallery</a> or follow me on any of the social media platforms. </article> 
-       <div class="helloimgdiv"> 
-       <img src=images/helloimg.jpg class="helloimg" alt="welcome image"></div>
-     
+      <div class="hellocontainer">
+        <div class="hellotext">
+          <article class="hellotextcontent">
+            <h3>Hi!</h3>
+            My name is Mica - a Hungarian girl that runs this page about crochet
+            and other (yarn) related crafts. <br />
+            <br />
+            I am an animal and art lover, definitely a crazy Freddie Mercury
+            fan, dancer, poker player, water, sun and yarn addict...and many
+            more. <br />
+            <br />
+            Read about my journey <a href="about.html">here</a> and check my
+            <a href="gallery.html"> gallery</a> or follow me on any of the
+            social media platforms.
+          </article>
+          <div class="helloimgdiv">
+            <img src=images/helloimg.jpg class="helloimg" alt="welcome image">
+          </div>
         </div>
       </div>
-
-
-
-
 
       <script>
         document.querySelector("#cookiewarning").classList.add("show");
@@ -85,12 +137,12 @@
       </script>
       <script>
         function openNav() {
-        document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
-      }
+          document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
+        }
 
-      function closeNav() {
-        document.getElementById("mySidenav").style.maxHeight = "0";
-      }
+        function closeNav() {
+          document.getElementById("mySidenav").style.maxHeight = "0";
+        }
       </script>
     </main>
 
