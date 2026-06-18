@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sewing</title>
+    <link rel="icon" type="image/png" href="images/yarnball2.png" title="yarn icon" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div class="navdiv">
+          <a href="index.html" class="menu">Home</a>
+          <a href="about.html" class="menu">About</a>
+          <div class="dropdown">
+            <span class="menu placeholder">Gallery</span>
+            <div class="dropdown-content">
+              <a href="crochet.html" class="menu">Crochet</a>
+              <a href="sewing.html" class="menu">Sewing</a>
+            </div>
+          </div>
+          <a href="video.html" class="menu">Video</a>
+          <a href="contact.html" class="menu">Contact</a>
+        </div>
+      </nav>
+      <div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10799;</a>
+        <a href="index.html" class="menu">Home</a>
+        <a href="about.html" class="menu">About</a>
+        <span class="menu placeholder">Gallery</span>
+        <a href="crochet.html" class="menu" style="margin-left: 16px;">- Crochet</a>
+        <a href="sewing.html" class="menu" style="margin-left: 16px;">- Sewing</a>
+        <a href="video.html" class="menu">Video</a>
+        <a href="contact.html" class="menu">Contact</a>
+      </div>
+      <div id="main" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+        <span style="cursor: pointer; font-family: Playfair Display; color: whitesmoke; font-size: 24px;" onclick="openNav()" class="spanmenu">Menu&#9776;</span>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <p> New addiction: sewing. Since forever I wished to learn sewing, but there was always a BUT. Time, budget, space, the scarcity that I will fall into this rabbithole as well. <br></br> Apparently yes, I did. <br>
+          Sice recycling and environmental consciousness are important to me, I started with upcycling old clothes. I had a lot of old clothes that I did't wear anymore. So I started cutting them and sewing them together to make new clothes (Rather experimental pieces til now).
+          Beside the joy of creating something new, my main purpose was to combine crocheting and sewing to have my very own designs. In progress.
+        </p>
+
+<section id="sewing-gallery" style="margin-top: 40px;">
+          <h2 style="text-align: center">Sewing Projects</h2>
+          <div class="subcontainer">
+            <div class="grid sewing">
+              <a>
+                <video width="320" height="240" controls>
+  <source src="./video/{sewing.video1}.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+              </a>
+              <a>
+                <video width="320" height="240" controls>
+  <source src="./video/{sewing.video2}.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+              </a>
+              <a
+                href="images/sewing3.jpg"
+                data-title="Upcycled project 3"
+                data-lightbox="sewing"
+                class="img"
+                style="background-image: url('images/sewing3.jpg')"
+              ></a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+        <footer>
+          <section class="footer">
+            <p class="footerp">Created by MicartCrochet &copy;</p>
+          </section>
+        </footer>
+
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.maxHeight = "300px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.maxHeight = "0";
+      }
+    </script>
+  </body>
+</html>
