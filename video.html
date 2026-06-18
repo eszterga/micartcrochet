@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta name="google-site-verification" content="VvaBqH5_lcQocPDdMvrdbf2t2FJrE-io7LN0BtmYvvo" />
@@ -32,7 +32,13 @@
         <div class="navdiv">
           <a href="index.html" class="menu">Home</a>
           <a href="about.html" class="menu">About</a>
-          <a href="gallery.html" class="menu">Gallery</a>
+          <div class="dropdown">
+            <span class="menu placeholder">Gallery</span>
+            <div class="dropdown-content">
+              <a href="crochet.html" class="menu">Crochet</a>
+              <a href="sewing.html" class="menu">Sewing</a>
+            </div>
+          </div>
           <a href="video.html" class="menu">Video</a>
           <a href="contact.html" class="menu">Contact</a>
         </div>
@@ -57,7 +63,8 @@
 
         <a href="index.html" class="menu">Home</a>
         <a href="about.html" class="menu">About</a>
-        <a href="gallery.html" class="menu">Gallery</a>
+        <span class="menu placeholder">Gallery</span>
+        <a href="crochet.html" class="menu" style="margin-left: 16px;">- Crochet</a>
         <a href="video.html" class="menu">Video</a>
         <a href="contact.html" class="menu">Contact</a>
       </div>
@@ -93,7 +100,7 @@
         <div class="content">
           <article>
             <h2 style="text-align: center">Workshops</h2>
-            Still back when I used to live in Kraków, I had the fortune to
+            Still back when I used to live in KrakÃ³w, I had the fortune to
             provide some workshops for people, who were interested on my art.
             Some gatherings were smaller, some with a bit bigger audience, but
             all of them we enjoyed a lot! In this way, I could combine the two
@@ -132,6 +139,18 @@
               width="560"
               height="315"
               src="https://www.youtube.com/embed/zdCR1WtcNak?si=3Wr_z8nUpaJamRty"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-container">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/MgwBD2-i-D8"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -194,7 +213,7 @@
           and <a href="https://heavymetalknitting.com/story/"> here. </a>
         </p>
       </div>
-      <!--hamburger JS mobile nézethez-->
+      <!--hamburger JS mobile nÃ©zethez-->
       <script>
         function openNav() {
           document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
@@ -213,3 +232,4 @@
     </footer>
   </body>
 </html>
+
