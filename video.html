@@ -1,4 +1,4 @@
-﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta name="google-site-verification" content="VvaBqH5_lcQocPDdMvrdbf2t2FJrE-io7LN0BtmYvvo" />
@@ -17,7 +17,7 @@
       title="yarn icon"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=7" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,55 +109,60 @@
             <h6>*For the videos, special thanks to G.B video</h6>
           </article>
 
-          <div class="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/GB-LlccNYyA?si=b0n2Ls8Gjpdj2Fx5"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+        <div class="grid-wrapper">
+          <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
+          <div class="grid video-grid">
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/GB-LlccNYyA?si=b0n2Ls8Gjpdj2Fx5"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/ivhSDcfinLc?si=SR_8zgdJB_qgEPHU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/zdCR1WtcNak?si=3Wr_z8nUpaJamRty"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/MgwBD2-i-D8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
-
-          <div class="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/ivhSDcfinLc?si=SR_8zgdJB_qgEPHU"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/zdCR1WtcNak?si=3Wr_z8nUpaJamRty"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/MgwBD2-i-D8"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
+        </div>
 
         <h2 style="text-align: center">Travels</h2>
         <p class="intro">In 2023 I came over one of my fears, namely solo travelling. As I am
@@ -211,10 +216,30 @@
           <a href="https://www.youtube.com/watch?v=xF9TZioZzBU"> here</a>
           and <a href="https://heavymetalknitting.com/story/"> here. </a>
         </p>
+        
+        <div class="video-container travel-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JR3LSRkJJTg?start=64"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
         </div>
       </div>
       <!--hamburger JS mobile nÃ©zethez-->
       <script>
+        /* Scroll Logic for Custom Gallery Sliders */
+        function scrollGrid(btn, direction) {
+          const grid = btn.parentElement.querySelector('.grid');
+          const scrollAmount = grid.clientWidth * 0.8; // Scrolls by 80% of visible container
+          grid.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        }
+
         function openNav() {
           var sidenav = document.getElementById("mySidenav");
           if (sidenav.style.maxHeight === "400px") {
