@@ -15,7 +15,7 @@
       href="images/yarnball2.png"
       title="yarn icon"
     />
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=5" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=7" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -223,6 +223,8 @@
          <p style="text-align:center; font-style:italic;">Click any image to open the full lightbox gallery.</p>
 
         <div class="subcontainer">
+          <div class="grid-wrapper">
+            <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
           <div class="grid baby">
             <a
               href="images/baby3.jpg"
@@ -253,9 +255,13 @@
               style="background-image: url('images/baby4.jpg')"
             ></a>
           </div>
+            <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
+          </div>
 
           <h2 style="text-align: center">Amigurumi figures</h2>
          
+          <div class="grid-wrapper">
+            <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
           <div class="grid amigurumi">
             <a
               href="images/ami1.jpg"
@@ -292,8 +298,6 @@
               class="img"
               style="background-image: url('images/ami5.jpg')"
             ></a>
-          </div>
-          <div style="position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; overflow:hidden; visibility:hidden;">
             <a
               href="images/ami6.jpg"
               data-title="Donkey"
@@ -358,15 +362,14 @@
               style="background-image: url('images/ami14.jpg')"
             ></a>
           </div>
-
-          <!-- <div class="grid amigurumi">
-
- 
-</div> -->
+            <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
+          </div>
 
           <h2 style="text-align: center">Clothes</h2>
           <h4>Summer</h4>
 
+          <div class="grid-wrapper">
+            <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
           <div class="grid summer">
             <a
               href="images/summertop2vert.jpg"
@@ -390,9 +393,13 @@
               style="background-image: url('images/summertopvert3.jpg')"
             ></a>
           </div>
+            <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
+          </div>
 
           <h4>Winter</h4>
 
+          <div class="grid-wrapper">
+            <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
           <div class="grid winter">
             <a
               href="images/pulcsifeketevert.jpg"
@@ -415,6 +422,8 @@
               class="img"
               style="background-image: url('images/shawlvert.jpg')"
             ></a>
+          </div>
+            <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
           </div>
         </div>
       </div>
@@ -452,6 +461,14 @@
     </script>
     <!--hamburger JS mobile nÃ©zethez-->
     <script>
+      /* Scroll Logic for Custom Gallery Sliders */
+      function scrollGrid(btn, direction) {
+        const grid = btn.parentElement.querySelector('.grid');
+        const scrollAmount = grid.clientWidth * 0.8; // Scrolls by 80% of visible container
+        grid.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+      }
+
+      /* Hamburger Menu */
       function openNav() {
         var sidenav = document.getElementById("mySidenav");
         if (sidenav.style.maxHeight === "400px") {
