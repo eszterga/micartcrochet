@@ -56,14 +56,14 @@
           );
         "
       >
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-          &#10799;</a
-        >
 
         <a href="index.html" class="menu">Home</a>
         <a href="about.html" class="menu">About</a>
-        <span class="menu placeholder">Gallery</span>
-        <a href="crochet.html" class="menu" style="margin-left: 16px;">- Crochet</a>
+        <span class="menu placeholder" onclick="toggleMobileGallery()" style="cursor: pointer;">Gallery &#9662;</span>
+        <div id="mobileGalleryMenu" style="display: none; width: 100%;">
+          <a href="crochet.html" class="menu submenu">Crochet</a>
+          <a href="sewing.html" class="menu submenu">Sewing</a>
+        </div>
         <a href="video.html" class="menu">Video</a>
         <a href="contact.html" class="menu">Contact</a>
       </div>
@@ -461,11 +461,26 @@
     <!--hamburger JS mobile nÃ©zethez-->
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.maxHeight = "300px"; // Adjust this value as needed
+        var sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.maxHeight === "400px") {
+          closeNav();
+        } else {
+          sidenav.style.maxHeight = "400px";
+        }
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.maxHeight = "0";
+        document.getElementById("mobileGalleryMenu").style.display = "none";
+      }
+
+      function toggleMobileGallery() {
+        var submenu = document.getElementById("mobileGalleryMenu");
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "block";
+        }
       }
     </script>
   </body>
