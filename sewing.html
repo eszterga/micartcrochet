@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sewing &#129525; &#129697;</title>
     <link rel="icon" type="image/png" href="images/yarnball2.png" title="yarn icon" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=3" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=7" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
@@ -57,17 +57,19 @@
             <div class="video-row">
               <div style="flex: 1; display: flex;">
                 <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
-                  <source src="video/sewing-video1.mp4" type="video/mp4">
+                  <source src="video/sewing.video1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div style="flex: 1; display: flex;">
                 <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
-                  <source src="video/sewing-video2.mp4" type="video/mp4">
+                  <source src="video/sewing.video.2.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
             </div>
+            <div class="grid-wrapper">
+              <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
             <div class="grid sewing">
               <a
                 href="images/sewing3.jpg"
@@ -76,6 +78,8 @@
                 class="img"
                 style="background-image: url('images/sewing3.jpg')"
               ></a>
+            </div>
+              <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
             </div>
           </div>
         </section>
@@ -90,6 +94,14 @@
 
     <script src="js/lightbox-plus-jquery.js?v=4"></script>
     <script>
+      /* Scroll Logic for Custom Gallery Sliders */
+      function scrollGrid(btn, direction) {
+        const grid = btn.parentElement.querySelector('.grid');
+        const scrollAmount = grid.clientWidth * 0.8; // Scrolls by 80% of visible container
+        grid.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+      }
+
+      /* Hamburger Menu */
       function openNav() {
         var sidenav = document.getElementById("mySidenav");
         if (sidenav.style.maxHeight === "400px") {
