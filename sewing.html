@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="css/lightbox.css?v=2" />
   </head>
   <body>
     <header>
@@ -55,18 +55,18 @@
           <h2 style="text-align: center">Sewing Projects</h2>
           <div class="subcontainer">
             <div class="video-row">
-              <a style="flex: 1; display: flex;">
-                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" controls>
-  <source src="video/sewing-video1.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-              </a>
-              <a style="flex: 1; display: flex;">
-                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" controls>
-  <source src="video/sewing-video2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-              </a>
+              <div style="flex: 1; display: flex;">
+                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
+                  <source src="video/sewing-video1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div style="flex: 1; display: flex;">
+                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
+                  <source src="video/sewing-video2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
             <div class="grid sewing">
               <a
@@ -88,7 +88,7 @@
           </section>
         </footer>
 
-    <script src="js/lightbox-plus-jquery.js"></script>
+    <script src="js/lightbox-plus-jquery.js?v=2"></script>
     <script>
       function openNav() {
         var sidenav = document.getElementById("mySidenav");
