@@ -3,7 +3,7 @@
   #mySidenav {
     display: none;
   }
-  span {
+  .spanmenu {
     display: none;
   }
   /* Side navigation menu */
@@ -44,22 +44,35 @@
     overflow: hidden;
     color: white;
     transition: max-height 0.5s ease-out;
-    z-index: 1;
+    z-index: 1000;
     border-radius: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
   }
 
-  .sidenav a {
-    padding: 8px 8px 8px 8px;
+  .sidenav a, .sidenav span {
+    padding: 12px 8px !important;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 20px !important;
     color: whitesmoke;
+    display: block !important;
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
   }
+  .sidenav a.submenu {
+    font-size: 17px !important;
+    background-color: rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
   .menu:hover {
     color: #333333;
-    text-decoration: underline;
-    font-size: 24px;
+    text-decoration: none;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgba(255,255,255,0.1);
   }
 
   .spanmenu {
@@ -67,12 +80,6 @@
     justify-content: right;
   }
 
-  .closebtn {
-    position: absolute;
-    right: 9px;
-    padding: 16px;
-    cursor: pointer;
-  }
 
   #main {
     padding: 16px;
@@ -352,41 +359,48 @@ nav {
 .dropdown-content {
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateX(-50%) translateY(-10px);
   transition: all 0.4s ease;
   position: absolute;
-  top: calc(100% + 15px); /* Ensures it doesn't overlap the header */
-  background-color: transparent; /* Makes the gap between items visible */
-  min-width: 120px;
-  z-index: 2;
+  top: 100%; 
+  left: 50%;
+  padding-top: 15px; /* Creates an invisible bridge to catch mouse hover */
+  background-color: transparent; 
+  min-width: 140px;
+  z-index: 100;
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Separates Crochet and Sewing */
+  gap: 8px; 
+}
+
+.dropdown .placeholder {
+  cursor: default;
 }
 
 .dropdown-content a.menu {
-  padding: 8px 16px; /* Smaller padding */
+  padding: 10px 16px; 
   display: block;
-  font-size: 18px !important; /* Smaller text, ignores desktop menu scaling */
+  font-size: 18px !important; 
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  background-color: rgba(125, 190, 185, 0.95); /* Lighter, softer turquoise matching header */
+  background-color: rgb(45, 149, 150); 
   border-radius: 30px; /* Pill shape instead of rectangle */
-  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.15);
-  color: whitesmoke !important; /* Ensure text stays white */
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  color: whitesmoke !important; 
+  text-align: center;
 }
 
 .dropdown-content a.menu:hover {
-  background-color: rgba(45, 149, 150, 0.95); /* Slightly darker when hovered */
-  font-weight: normal !important; /* Prevent text from bolding and jumping */
+  background-color: rgb(33, 71, 102); 
+  font-weight: normal !important; 
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
