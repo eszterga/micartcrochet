@@ -181,24 +181,26 @@ body.lb-disable-scrolling {
   color: #999999;
 }
 
-.lb-data .lb-close {
+.lb-outerContainer .lb-close {
   display: block;
-  float: right;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 10001;
   width: 30px;
   height: 30px;
   background: url(../images/close.png) top right no-repeat;
-  text-align: right;
   outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
-.lb-data .lb-close:hover {
+.lb-outerContainer .lb-close:hover {
   cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
 }
