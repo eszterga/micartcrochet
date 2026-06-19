@@ -1020,67 +1020,122 @@ width:15%;
   }
 }
 
-/* ez a Galleryre vonatkozo szabályok, alaértelmezett majd kisebb nézet */
-@media screen and (min-width:200px) and (max-width:2500px) { 
+/* GALLERY SLIDER (Desktop & Mobile) */
+.grid-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 .grid {
   display: flex;
   gap: 20px;
   flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px; /* Space for scrollbar */
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #2d9596 rgba(245, 245, 245, 0.5);
+}
+
+.grid::-webkit-scrollbar {
+  height: 8px;
+}
+.grid::-webkit-scrollbar-track {
+  background: rgba(245, 245, 245, 0.5);
+  border-radius: 4px;
+}
+.grid::-webkit-scrollbar-thumb {
+  background: #2d9596;
+  border-radius: 4px;
 }
 
 .img {
   display: block;
-  width: 100%;
-  flex: 1;
+  flex: 0 0 calc(33.333% - 14px); /* Show 3 per row on desktop */
   aspect-ratio: 0.6;
   background-size: cover;
   background-position: center center;
+  scroll-snap-align: start;
+  border-radius: 8px; /* Smooth rounded corners for modern look */
 }
 
-.playbutton {
-  display:none !important;
-}  }
+/* Desktop Arrows */
+.slide-arrow {
+  background-color: rgba(45, 149, 150, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  display: none; /* hidden until wrapper is hovered */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.slide-arrow:hover {
+  background-color: rgb(33, 71, 102);
+}
+
+.slide-arrow.left {
+  left: -20px;
+}
+
+.slide-arrow.right {
+  right: -20px;
+}
+
+@media screen and (min-width: 701px) {
+  .grid-wrapper:hover .slide-arrow {
+    display: flex;
+  }
+}
 
 @media screen and (max-width: 700px) {
   .grid {
-      flex-direction: column;
-      display:flex;
-     align-items: center;
-    }
-
-    .grid a:nth-child(n+2) {
-      display: none !important;
-    }
-
-    .grid a:first-child {
-      position: relative;
-    }
-
-    /* The pure CSS White Play Icon */
-    .grid a:first-child::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -25px;
-      margin-left: -15px;
-      border-top: 25px solid transparent;
-      border-bottom: 25px solid transparent;
-      border-left: 40px solid rgba(255, 255, 255, 0.95);
-      filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6));
-      pointer-events: none; /* Allows the click to pass through to the image */
-    }
-  
-    
-    .img {
-    display: block;
-    flex: 1;
-    width:70%;
-  background-size: cover;
-    background-position: center center;
-    }
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
+  .grid .img {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+  .grid .img:nth-child(n+2) {
+    display: none !important;
+  }
+  .grid .img:first-child {
+    position: relative;
+  }
+  .grid .img:first-child::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -15px;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 40px solid rgba(255, 255, 255, 0.95);
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.6));
+    pointer-events: none;
+  }
+  .slide-arrow {
+    display: none !important; /* Force hide arrows on mobile, users swipe */
+  }
 }
   
   
