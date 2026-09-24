@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sewing &#129525; &#129697;</title>
+    <link rel="icon" type="image/png" href="images/yarnball2.png" title="yarn icon" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/lightbox.css?v=3" />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div class="navdiv">
+          <a href="index.html" class="menu">Home</a>
+          <a href="about.html" class="menu">About</a>
+          <div class="dropdown">
+            <span class="menu placeholder">Gallery</span>
+            <div class="dropdown-content">
+              <a href="crochet.html" class="menu">Crochet</a>
+              <a href="sewing.html" class="menu">Sewing</a>
+            </div>
+          </div>
+          <a href="video.html" class="menu">Video</a>
+          <a href="contact.html" class="menu">Contact</a>
+        </div>
+      </nav>
+      <div id="mySidenav" class="sidenav" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+        <a href="index.html" class="menu">Home</a>
+        <a href="about.html" class="menu">About</a>
+        <span class="menu placeholder" onclick="toggleMobileGallery()" style="cursor: pointer;">Gallery &#9662;</span>
+        <div id="mobileGalleryMenu" style="display: none; width: 100%;">
+          <a href="crochet.html" class="menu submenu">Crochet</a>
+          <a href="sewing.html" class="menu submenu">Sewing</a>
+        </div>
+        <a href="video.html" class="menu">Video</a>
+        <a href="contact.html" class="menu">Contact</a>
+      </div>
+      <div id="main" style="background: linear-gradient(315deg, rgb(33, 71, 102) 0%, rgba(38, 80, 115) 20%, rgb(45, 149, 150) 40%, rgb(154, 208, 194) 90%);">
+        <span style="cursor: pointer; font-family: Playfair Display; color: whitesmoke; font-size: 24px;" onclick="openNav()" class="spanmenu">Menu&#9776;</span>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <p class="intro"> New addiction: sewing. Since forever I wished to learn sewing, but there was always a BUT. Time, budget, space, the scarcity that I will fall into this rabbithole as well.</p>
+        <p class="intro"> Apparently yes, I did. </p>
+        <p class="intro"> Since recycling and environmental consciousness are important to me, I started with upcycling old clothes. I had a lot of old clothes that I didn't wear anymore. So I started cutting them and sewing them together to make new clothes (Rather experimental pieces til now).
+          Beside the joy of creating something new, my main purpose was to combine crocheting and sewing to have my very own designs. In progress.
+        </p>
+
+<section id="sewing-gallery" style="margin-top: 40px;">
+          <h2 style="text-align: center">Sewing Projects</h2>
+          <div class="subcontainer">
+            <div class="sewing-videos">
+              <button class="sewing-video-card" type="button" data-video="video/sewing.video1.mp4" aria-label="Play sewing video 1">
+                <video muted playsinline preload="metadata" src="video/sewing.video1.mp4"></video>
+                <span class="sewing-video-play" aria-hidden="true"></span>
+              </button>
+              <button class="sewing-video-card" type="button" data-video="video/sewing.video2.mp4" aria-label="Play sewing video 2">
+                <video muted playsinline preload="metadata" src="video/sewing.video2.mp4"></video>
+                <span class="sewing-video-play" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <div class="sewing-video-modal" hidden>
+            <button class="sewing-video-close" type="button" aria-label="Close video">&#10005;</button>
+            <video class="sewing-video-player" controls playsinline></video>
+          </div>
+        </section>
+
+      </div>
+    </main>
+        <footer>
+          <section class="footer">
+            <p class="footerp">Created by MicartCrochet &copy;</p>
+          </section>
+        </footer>
+
+    <script src="js/lightbox-plus-jquery.js?v=4"></script>
+    <script>
+      document.querySelectorAll(".sewing-video-card").forEach(function (card) {
+        var preview = card.querySelector("video");
+        preview.addEventListener("loadeddata", function () {
+          if (preview.currentTime < 0.1) {
+            preview.currentTime = 0.1;
+          }
+        });
+        card.addEventListener("click", function () {
+          var modal = document.querySelector(".sewing-video-modal");
+          var player = modal.querySelector(".sewing-video-player");
+          player.src = card.getAttribute("data-video");
+          modal.hidden = false;
+          document.body.style.overflow = "hidden";
+          player.play();
+        });
+      });
+
+      var sewingModal = document.querySelector(".sewing-video-modal");
+      sewingModal.querySelector(".sewing-video-close").addEventListener("click", closeSewingVideo);
+      sewingModal.addEventListener("click", function (event) {
+        if (event.target === sewingModal) {
+          closeSewingVideo();
+        }
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !sewingModal.hidden) {
+          closeSewingVideo();
+        }
+      });
+
+      function closeSewingVideo() {
+        var player = sewingModal.querySelector(".sewing-video-player");
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+        sewingModal.hidden = true;
+        document.body.style.overflow = "";
+      }
+
+      /* Scroll Logic for Custom Gallery Sliders */
+      function scrollGrid(btn, direction) {
+        const grid = btn.parentElement.querySelector('.grid');
+        const scrollAmount = grid.clientWidth * 0.8; // Scrolls by 80% of visible container
+        grid.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+      }
+
+      /* Hamburger Menu */
+      function openNav() {
+        var sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.maxHeight === "400px") {
+          closeNav();
+        } else {
+          sidenav.style.maxHeight = "400px";
+        }
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.maxHeight = "0";
+        document.getElementById("mobileGalleryMenu").style.display = "none";
+      }
+
+      function toggleMobileGallery() {
+        var submenu = document.getElementById("mobileGalleryMenu");
+        if (submenu.style.display === "block") {
+          submenu.style.display = "none";
+        } else {
+          submenu.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
