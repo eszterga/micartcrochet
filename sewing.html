@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sewing &#129525; &#129697;</title>
     <link rel="icon" type="image/png" href="images/yarnball2.png" title="yarn icon" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=7" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
@@ -54,33 +54,20 @@
 <section id="sewing-gallery" style="margin-top: 40px;">
           <h2 style="text-align: center">Sewing Projects</h2>
           <div class="subcontainer">
-            <div class="video-row">
-              <div style="flex: 1; display: flex;">
-                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
-                  <source src="video/sewing.video1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div style="flex: 1; display: flex;">
-                <video style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px;" controls playsinline preload="metadata">
-                  <source src="video/sewing.video2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+            <div class="sewing-videos">
+              <button class="sewing-video-card" type="button" data-video="video/sewing.video1.mp4" aria-label="Play sewing video 1">
+                <video muted playsinline preload="metadata" src="video/sewing.video1.mp4"></video>
+                <span class="sewing-video-play" aria-hidden="true"></span>
+              </button>
+              <button class="sewing-video-card" type="button" data-video="video/sewing.video2.mp4" aria-label="Play sewing video 2">
+                <video muted playsinline preload="metadata" src="video/sewing.video2.mp4"></video>
+                <span class="sewing-video-play" aria-hidden="true"></span>
+              </button>
             </div>
-            <div class="grid-wrapper">
-              <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
-            <div class="grid sewing">
-              <a
-                href="images/sewing3.jpg"
-                data-title="Upcycled project 3"
-                data-lightbox="sewing"
-                class="img"
-                style="background-image: url('images/sewing3.jpg')"
-              ></a>
-            </div>
-              <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
-            </div>
+          </div>
+          <div class="sewing-video-modal" hidden>
+            <button class="sewing-video-close" type="button" aria-label="Close video">&#10005;</button>
+            <video class="sewing-video-player" controls playsinline></video>
           </div>
         </section>
 
@@ -94,6 +81,45 @@
 
     <script src="js/lightbox-plus-jquery.js?v=4"></script>
     <script>
+      document.querySelectorAll(".sewing-video-card").forEach(function (card) {
+        var preview = card.querySelector("video");
+        preview.addEventListener("loadeddata", function () {
+          if (preview.currentTime < 0.1) {
+            preview.currentTime = 0.1;
+          }
+        });
+        card.addEventListener("click", function () {
+          var modal = document.querySelector(".sewing-video-modal");
+          var player = modal.querySelector(".sewing-video-player");
+          player.src = card.getAttribute("data-video");
+          modal.hidden = false;
+          document.body.style.overflow = "hidden";
+          player.play();
+        });
+      });
+
+      var sewingModal = document.querySelector(".sewing-video-modal");
+      sewingModal.querySelector(".sewing-video-close").addEventListener("click", closeSewingVideo);
+      sewingModal.addEventListener("click", function (event) {
+        if (event.target === sewingModal) {
+          closeSewingVideo();
+        }
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !sewingModal.hidden) {
+          closeSewingVideo();
+        }
+      });
+
+      function closeSewingVideo() {
+        var player = sewingModal.querySelector(".sewing-video-player");
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+        sewingModal.hidden = true;
+        document.body.style.overflow = "";
+      }
+
       /* Scroll Logic for Custom Gallery Sliders */
       function scrollGrid(btn, direction) {
         const grid = btn.parentElement.querySelector('.grid');
