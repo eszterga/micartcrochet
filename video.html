@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="google-site-verification" content="VvaBqH5_lcQocPDdMvrdbf2t2FJrE-io7LN0BtmYvvo" />
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Yarn art"
+      content="MicartCrochet, where things turn into something beautiful. Handmade crochet, punchneedle and sewed items, patterns"
+    />
+    <title>Videos &#x1F4F9;</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/yarnball2.png"
+      title="yarn icon"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=10" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div class="navdiv">
+          <a href="index.html" class="menu">Home</a>
+          <a href="about.html" class="menu">About</a>
+          <div class="dropdown">
+            <span class="menu placeholder">Gallery</span>
+            <div class="dropdown-content">
+              <a href="crochet.html" class="menu">Crochet</a>
+              <a href="sewing.html" class="menu">Sewing</a>
+            </div>
+          </div>
+          <a href="video.html" class="menu">Video</a>
+          <a href="contact.html" class="menu">Contact</a>
+        </div>
+      </nav>
+      <!-- hamburger menu-->
+      <div
+        id="mySidenav"
+        class="sidenav"
+        style="
+          background: linear-gradient(
+            315deg,
+            rgb(33, 71, 102) 0%,
+            rgba(38, 80, 115) 20%,
+            rgb(45, 149, 150) 40%,
+            rgb(154, 208, 194) 90%
+          );
+        "
+      >
+
+        <a href="index.html" class="menu">Home</a>
+        <a href="about.html" class="menu">About</a>
+        <span class="menu placeholder" onclick="toggleMobileGallery()" style="cursor: pointer;">Gallery &#9662;</span>
+        <div id="mobileGalleryMenu" style="display: none; width: 100%;">
+          <a href="crochet.html" class="menu submenu">Crochet</a>
+          <a href="sewing.html" class="menu submenu">Sewing</a>
+        </div>
+        <a href="video.html" class="menu">Video</a>
+        <a href="contact.html" class="menu">Contact</a>
+      </div>
+
+      <div
+        id="main"
+        style="
+          background: linear-gradient(
+            315deg,
+            rgb(33, 71, 102) 0%,
+            rgba(38, 80, 115) 20%,
+            rgb(45, 149, 150) 40%,
+            rgb(154, 208, 194) 90%
+          );
+        "
+      >
+        <span
+          style="
+            cursor: pointer;
+            font-family: Playfair Display;
+            color: whitesmoke;
+            font-size: 24px;
+          "
+          onclick="openNav()"
+          class="spanmenu"
+          >Menu&#9776;</span
+        >
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <div class="content">
+          <article>
+            <h2 style="text-align: center">Workshops</h2>
+            <p class="intro">Still back when I used to live in Kraków, I had the fortune to
+            provide some workshops for people, who were interested on my art.
+            Some gatherings were smaller, some with a bit bigger audience, but
+            all of them we enjoyed a lot! In this way, I could combine the two
+            things, which - I think at least - I am good at: teaching and
+            crocheting.</p>
+            <h6>*For the videos, special thanks to G.B video</h6>
+          </article>
+
+        <div class="workshop-grid">
+          <button class="workshop-card" type="button" data-video="GB-LlccNYyA">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/GB-LlccNYyA/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 06.2018 Krakow</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="ivhSDcfinLc">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/ivhSDcfinLc/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 2018 Krakow (2)</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="zdCR1WtcNak">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/zdCR1WtcNak/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 2018 Krakow</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="MgwBD2-i-D8">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/MgwBD2-i-D8/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop, 2026.02 Wien</span>
+          </button>
+        </div>
+
+        <div class="workshop-modal" hidden>
+          <button class="workshop-close" type="button" aria-label="Close video">&#10005;</button>
+          <div class="workshop-frame">
+            <iframe
+              title="Workshop video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <h2 style="text-align: center">Travels</h2>
+        <p class="intro">In 2023 I came over one of my fears, namely solo travelling. As I am
+        following many crochet and yarn artist all around the world, in March a
+        post crossed my path from
+        <a href="https://www.facebook.com/ritacrochetpaintings">
+          Rita Cavallaro
+        </a>
+        where she showed one of her masterpiece and referred to an event, where
+        she is going to show it.</p>
+
+        <div class="video-container travel-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/n8m833-9QAo?si=P_vThypbKQ76wX26"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        30 minutes later I was checking Google Maps, all the cheap flights and
+        the event itself, what she was referring to:
+        <a href="https://www.facebook.com/yarnbombingbarzano"
+          >Yarnbombing Barzano.
+        </a>
+        Long story short: after seeing all the breahtaking pieces and the
+        festival itself, a few hours later all was settled for my journey in
+        June to Barzano. Without hesitation and any questionmarks I just knew, I
+        have to be there. So I was.
+        <p>
+          I could not be happier that I fought through my anxiety, not just
+          because I've met super cute people, wonderful artists and generally
+          was a great adventure - but because there I've met an amazing crafty
+          women (<a href="https://www.facebook.com/migliarino.migliarino.9"
+            >Migliarino Blue</a
+          >)from Vienna! Since then we keep in touch, I can not adore her
+          dedication and creativity enough to zero waste, that she introduced me
+          to the world of crafty markets and generally, her friendship.
+        </p>
+        <h4>Hold my Spritzer!</h4>
+        <p>
+          You probably still think, knitting and crocheting is for old, sweet
+          ladies. Well, let me show you another event, which is still on my
+          bucket list, but one day for sure I would like to visit: KNITTING
+          HEAVY METAL CHAMPIONSHIP. Yes, read it one more and yes, it is exactly
+          what it sounds. You can read about
+          <a href="https://www.youtube.com/watch?v=xF9TZioZzBU"> here</a>
+          and <a href="https://heavymetalknitting.com/story/"> here. </a>
+        </p>
+        
+        <div class="video-container travel-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/JR3LSRkJJTg?start=64"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        </div>
+      </div>
+      <!--hamburger JS mobile nÃ©zethez-->
+      <script>
+        var workshopModal = document.querySelector(".workshop-modal");
+        var workshopFrame = workshopModal.querySelector("iframe");
+        var workshopReturnFocus = null;
+
+        function openWorkshop(card) {
+          var id = card.getAttribute("data-video");
+          var title = card.querySelector(".workshop-title").textContent;
+          workshopReturnFocus = card;
+          workshopFrame.title = title;
+          workshopFrame.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+          workshopModal.hidden = false;
+          workshopModal.querySelector(".workshop-close").focus();
+        }
+
+        function closeWorkshop() {
+          workshopModal.hidden = true;
+          workshopFrame.src = "";
+          if (workshopReturnFocus) {
+            workshopReturnFocus.focus();
+          }
+        }
+
+        document.querySelectorAll(".workshop-card").forEach(function (card) {
+          card.addEventListener("click", function () {
+            openWorkshop(card);
+          });
+        });
+
+        workshopModal.querySelector(".workshop-close").addEventListener("click", closeWorkshop);
+        workshopModal.addEventListener("click", function (event) {
+          if (event.target === workshopModal) {
+            closeWorkshop();
+          }
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && !workshopModal.hidden) {
+            closeWorkshop();
+          }
+        });
+
+        function openNav() {
+          var sidenav = document.getElementById("mySidenav");
+          if (sidenav.style.maxHeight === "400px") {
+            closeNav();
+          } else {
+            sidenav.style.maxHeight = "400px";
+          }
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.maxHeight = "0";
+          document.getElementById("mobileGalleryMenu").style.display = "none";
+        }
+
+        function toggleMobileGallery() {
+          var submenu = document.getElementById("mobileGalleryMenu");
+          if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+          } else {
+            submenu.style.display = "block";
+          }
+        }
+      </script>
+    </main>
+
+    <footer>
+      <section class="footer">
+        <p class="footerp">Created by MicartCrochet &copy;</p>
+      </section>
+    </footer>
+  </body>
+</html>

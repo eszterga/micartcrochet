@@ -1401,30 +1401,138 @@ footer {
   }
 }
 
-/* Video Slider Specifics */
-.grid.video-grid {
-  align-items: stretch;
+/* Workshop videos: thumbnail grid, one player on click */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 22px;
+  margin: 28px 0 36px;
 }
-.grid.video-grid .video-container {
-  flex: 0 0 calc(33.333% - 14px) !important; /* Show 3 in a row so the 4th requires scrolling! */
-  width: auto !important;
-  margin-bottom: 0 !important;
-  scroll-snap-align: start;
-  display: block !important;
-  padding: 0 !important;
+
+.workshop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: rgb(33, 71, 102);
+  font-family: "Playfair Display", serif;
 }
-@media screen and (max-width: 1000px) {
-  .grid.video-grid .video-container {
-    flex: 0 0 calc(50% - 10px) !important; /* 2 videos in a row on medium screens */
+
+.workshop-card:focus-visible {
+  outline: 2px solid rgb(45, 149, 150);
+  outline-offset: 4px;
+}
+
+.workshop-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgb(33, 71, 102);
+  box-shadow: 0 8px 18px rgba(33, 71, 102, 0.16);
+}
+
+.workshop-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.workshop-card:hover .workshop-thumb img,
+.workshop-card:focus-visible .workshop-thumb img {
+  transform: scale(1.04);
+}
+
+.workshop-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.workshop-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  margin-top: -12px;
+  margin-left: -8px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid rgb(45, 149, 150);
+}
+
+.workshop-title {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.workshop-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.workshop-modal[hidden] {
+  display: none;
+}
+
+.workshop-frame {
+  width: min(960px, 92vw);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.workshop-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.workshop-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: rgb(33, 71, 102);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .workshop-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
-}
-@media screen and (max-width: 700px) {
-  .grid.video-grid {
-    flex-direction: row !important; /* Keep horizontal scroll on mobile */
-    overflow-x: auto !important;
-    padding-bottom: 10px !important;
-  }
-  .grid.video-grid .video-container {
-    flex: 0 0 85% !important; /* Peek the next video to encourage horizontal swipe */
+
+  .workshop-frame {
+    width: 94vw;
   }
 }
