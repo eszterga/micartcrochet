@@ -1451,6 +1451,11 @@ footer {
   transform: scale(1.04);
 }
 
+.workshop-card-short .workshop-thumb img {
+  object-fit: contain;
+  background: rgb(33, 71, 102);
+}
+
 .workshop-play {
   position: absolute;
   top: 50%;
@@ -1512,6 +1517,12 @@ footer {
   display: block;
 }
 
+.workshop-frame-short {
+  width: min(420px, 88vw);
+  height: min(86vh, 820px);
+  aspect-ratio: 9 / 16;
+}
+
 .workshop-close {
   position: absolute;
   top: 16px;
@@ -1534,5 +1545,10 @@ footer {
 
   .workshop-frame {
     width: 94vw;
+  }
+
+  .workshop-frame-short {
+    width: min(420px, 92vw);
+    height: auto;
   }
 }

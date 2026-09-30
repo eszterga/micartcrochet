@@ -17,7 +17,7 @@
       title="yarn icon"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=10" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=11" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -138,6 +138,13 @@
             </span>
             <span class="workshop-title">Crochet workshop, 2026.02 Wien</span>
           </button>
+          <button class="workshop-card workshop-card-short" type="button" data-video="qmGF1m3mlks" data-short="true">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/qmGF1m3mlks/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">September 2026, Crochet workshop</span>
+          </button>
         </div>
 
         <div class="workshop-modal" hidden>
@@ -228,9 +235,11 @@
         function openWorkshop(card) {
           var id = card.getAttribute("data-video");
           var title = card.querySelector(".workshop-title").textContent;
+          var frameBox = workshopModal.querySelector(".workshop-frame");
           workshopReturnFocus = card;
           workshopFrame.title = title;
           workshopFrame.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+          frameBox.classList.toggle("workshop-frame-short", card.hasAttribute("data-short"));
           workshopModal.hidden = false;
           workshopModal.querySelector(".workshop-close").focus();
         }
@@ -238,6 +247,7 @@
         function closeWorkshop() {
           workshopModal.hidden = true;
           workshopFrame.src = "";
+          workshopModal.querySelector(".workshop-frame").classList.remove("workshop-frame-short");
           if (workshopReturnFocus) {
             workshopReturnFocus.focus();
           }
