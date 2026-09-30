@@ -17,7 +17,7 @@
       title="yarn icon"
     />
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=7" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=11" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,59 +109,54 @@
             <h6>*For the videos, special thanks to G.B video</h6>
           </article>
 
-        <div class="grid-wrapper">
-          <button class="slide-arrow left" onclick="scrollGrid(this, -1)">&#10094;</button>
-          <div class="grid video-grid">
-            <div class="video-container">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/GB-LlccNYyA?si=b0n2Ls8Gjpdj2Fx5"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-container">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/ivhSDcfinLc?si=SR_8zgdJB_qgEPHU"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-container">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/zdCR1WtcNak?si=3Wr_z8nUpaJamRty"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="video-container">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/MgwBD2-i-D8"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
+        <div class="workshop-grid">
+          <button class="workshop-card" type="button" data-video="GB-LlccNYyA">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/GB-LlccNYyA/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 06.2018 Krakow</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="ivhSDcfinLc">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/ivhSDcfinLc/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 2018 Krakow (2)</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="zdCR1WtcNak">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/zdCR1WtcNak/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop 2018 Krakow</span>
+          </button>
+          <button class="workshop-card" type="button" data-video="MgwBD2-i-D8">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/MgwBD2-i-D8/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">Crochet workshop, 2026.02 Wien</span>
+          </button>
+          <button class="workshop-card workshop-card-short" type="button" data-video="qmGF1m3mlks" data-short="true">
+            <span class="workshop-thumb">
+              <img src="https://i.ytimg.com/vi/qmGF1m3mlks/hqdefault.jpg" alt="" />
+              <span class="workshop-play" aria-hidden="true"></span>
+            </span>
+            <span class="workshop-title">September 2026, Crochet workshop</span>
+          </button>
+        </div>
+
+        <div class="workshop-modal" hidden>
+          <button class="workshop-close" type="button" aria-label="Close video">&#10005;</button>
+          <div class="workshop-frame">
+            <iframe
+              title="Workshop video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
-          <button class="slide-arrow right" onclick="scrollGrid(this, 1)">&#10095;</button>
         </div>
 
         <h2 style="text-align: center">Travels</h2>
@@ -233,12 +228,48 @@
       </div>
       <!--hamburger JS mobile nÃ©zethez-->
       <script>
-        /* Scroll Logic for Custom Gallery Sliders */
-        function scrollGrid(btn, direction) {
-          const grid = btn.parentElement.querySelector('.grid');
-          const scrollAmount = grid.clientWidth * 0.8; // Scrolls by 80% of visible container
-          grid.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        var workshopModal = document.querySelector(".workshop-modal");
+        var workshopFrame = workshopModal.querySelector("iframe");
+        var workshopReturnFocus = null;
+
+        function openWorkshop(card) {
+          var id = card.getAttribute("data-video");
+          var title = card.querySelector(".workshop-title").textContent;
+          var frameBox = workshopModal.querySelector(".workshop-frame");
+          workshopReturnFocus = card;
+          workshopFrame.title = title;
+          workshopFrame.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+          frameBox.classList.toggle("workshop-frame-short", card.hasAttribute("data-short"));
+          workshopModal.hidden = false;
+          workshopModal.querySelector(".workshop-close").focus();
         }
+
+        function closeWorkshop() {
+          workshopModal.hidden = true;
+          workshopFrame.src = "";
+          workshopModal.querySelector(".workshop-frame").classList.remove("workshop-frame-short");
+          if (workshopReturnFocus) {
+            workshopReturnFocus.focus();
+          }
+        }
+
+        document.querySelectorAll(".workshop-card").forEach(function (card) {
+          card.addEventListener("click", function () {
+            openWorkshop(card);
+          });
+        });
+
+        workshopModal.querySelector(".workshop-close").addEventListener("click", closeWorkshop);
+        workshopModal.addEventListener("click", function (event) {
+          if (event.target === workshopModal) {
+            closeWorkshop();
+          }
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && !workshopModal.hidden) {
+            closeWorkshop();
+          }
+        });
 
         function openNav() {
           var sidenav = document.getElementById("mySidenav");
